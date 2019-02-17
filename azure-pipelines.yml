@@ -15,7 +15,7 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
-- script: |
-    yarn install
-    yarn site:build
-  displayName: 'yarn install and build'
+- script:
+    npm install
+    npm run site:build
+  displayName: 'npm install and build'
