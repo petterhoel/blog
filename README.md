@@ -37,8 +37,7 @@ Spin up the dev server
 i'm sorry but our tests are at another castle
 ```
 
-## Deployment
-
+## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/fcee5757-7d0e-43e6-b441-28bd554805ba/deploy-status)](https://app.netlify.com/sites/gallant-mahavira-2e103d/deploys)
 A merge to master will deploy this site. 
 
 ## Built With
