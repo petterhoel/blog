@@ -1,8 +1,8 @@
 {
     "license": "MIT",
     "scripts": {
-        "site:dev": "vuepress dev site",
-        "site:build": "vuepress build site"
+        "site dev": "vuepress dev site",
+        "site build": "vuepress build site"
     },
     "devDependencies": {
         "@vuepress/plugin-blog": "^1.0.0-alpha.0"
