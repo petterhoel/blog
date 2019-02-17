@@ -1,0 +1,2 @@
+<BlogIndex />
+<RootRedirecter />
