@@ -10,6 +10,9 @@ It is public and it is open source. Should anyone come across this and want to c
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+`> npm install`
+`> npm `
+
 ### Prerequisites
 
 What things you need to install the software and how to install them
