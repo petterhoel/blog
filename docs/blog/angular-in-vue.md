@@ -2,6 +2,7 @@
 title: Angular in Vue
 date: 2019-02-16
 description: Embedded app
+author: Petter
 ---
 # Angular in Vue
 

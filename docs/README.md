@@ -1,2 +1,1 @@
-<BlogIndex />
 <RootRedirecter />
