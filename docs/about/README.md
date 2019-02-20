@@ -1,6 +1,6 @@
 # What is this then?
 <p>
-<img src="../assets/petter.jpg" alt="petters face" style="border-radius:50%;margin:0 0 10px 10px;float:right!important">
+<img src="../assets/petter.jpg" alt="petters face" class="about-image">
 
 **_The bits and the pixels_** – there is so much to them. 
 

@@ -6,7 +6,7 @@ author: Petter
 ---
 # Angular in Vue
 
-Getting to know Vue via VuePress. VuePress is a static site docs/blog engine on top of Vue. So what should we do with that? Embedd an angular app + editor of course. 
+Getting to know Vue via VuePress. VuePress is a static site docs/blog engine on top of Vue. So what should we do with that? Embed an angular app + editor of course. 
 
 embedding...  honestly it's just an iframe pointing to a stackblitz thing...
 
