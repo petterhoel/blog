@@ -1,10 +1,10 @@
 module.exports = {
     title: "bits && pixels",
-    description: 'These are just reminders',
+    description: 'Tiny snippet reminders',
     themeConfig: {
         nav: [
             { text: 'Blog', link: '/blog/' },
-            { text: 'Whats this?', link: '/about/' },
+            { text: 'What\'s this?', link: '/about/' },
         ],
         repo: 'petterhoel/blog',
     },
