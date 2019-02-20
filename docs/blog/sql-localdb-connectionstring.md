@@ -1,7 +1,7 @@
 ---
 title: localdb connection string
 date: 2019-02-17
-description: localdb connection string for SQL server
+description: Using localdb in connection string for SQL server for hassle free setup
 author: Petter
 ---
 # SQL Server local db connection string
