@@ -12,6 +12,6 @@ Communication is the most important skill for any developer. _Do no harm_ is the
 
 **_whoami_**  I tease the cat, walk the dog, do my asanas - enjoy music, food and coffee. I also work as a web developer and I live in Oslo. My name is Petter Hoel.
 
-Wanna get in touch?  [ping me on twitter](https://twitter.com/petterhoel "@petterhoel") or follow the [GitHub link](https://github.com/petterhoel/blog "repo for this blog"). 
+Wanna get in touch?  [ping me on twitter](https://twitter.com/petterhoel "@petterhoel"). 
 
 </p>

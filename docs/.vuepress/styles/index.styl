@@ -5,6 +5,8 @@ body
   font-family 'Crimson Text', serif !important;
   font-size 22px!important
   letter-spacing .18!important
+  background-color #fbfbff!important
+  min-height 100vh
 
 pre
   font-size 16px!important
@@ -26,5 +28,11 @@ img.about-image
     margin-left 10px
     margin-bottom 10px
 
-.navbar, .navbar .links
-  background-color #e3eae6!important
+.navbar .links
+  background-color transparent!important
+
+.navbar
+  background: #C9D6FF;  /* fallback for old browsers */
+  background: linear-gradient(to right, #dcdfe6, #c5cce4);
+  border-bottom: none !important;
+  background: -webkit-linear-gradient(to right, #dcdfe6, #c5cce4);  /* Chrome 10-25, Safari 5.1-6 */
