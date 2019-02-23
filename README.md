@@ -38,7 +38,17 @@ i'm sorry but our tests are at another castle
 ```
 
 ## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/fcee5757-7d0e-43e6-b441-28bd554805ba/deploy-status)](https://app.netlify.com/sites/gallant-mahavira-2e103d/deploys)
-A merge to master will deploy this site. 
+A merge to master will deploy _this_ site. 
+
+If you are using this as a starter for your own project you wanna run 
+
+```
+> yarn docs:build
+``` 
+
+That will create all the static files for your site and place them in ```docs/.vuepress/dist```. Copy these files to your sites root folder. 
+
+This projects uses [netlify](https://www.netlify.com/) for that. They make it real simple. 
 
 ## Built With
 

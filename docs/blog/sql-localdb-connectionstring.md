@@ -1,14 +1,16 @@
 ---
-title: localdb connection string
+title: Localdb connection strings
 date: 2019-02-17
-description: Using localdb in connection string for SQL server for hassle free setup
+description: Use localdb in SQL server connection strings for a hassle free dev setup.
 author: Petter
 ---
-# SQL Server local db connection string
-I can never remember that connectionstring for localdb on SQLServer. The thing about localdb is that it just works, no setup required. And ef core will create the db on the fly when running `context.Database.Migrate();` if it doesn't already exist. This means happy times when you are doing a fresh clone 😄
+# Use localdb in SQL Server connection strings
+I can never remember how to type up Sql Server connectionstrings using localdb. The thing about localdb is that it just works, no setup required. 
 
+Ef core will even create the db on the fly when running `context.Database.Migrate();` if it doesn't already exist. This means happy times whenever you or your team mates are doing a fresh clone 😄
+  
 ```
-"Server=(localdb)\\mssqllocaldb;Database=Company.Application.NameOfDb;Trusted_Connection=True;"
+"Server=(localdb)\\mssqllocaldb;Database=NameOfDb;Trusted_Connection=True;"
 ```
 
 This "blog" is basically a place for reminders like these. However small and stupid. 
