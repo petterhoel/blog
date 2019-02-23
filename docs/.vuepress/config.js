@@ -1,5 +1,5 @@
 module.exports = {
-    title: "bits && pixels",
+    title: "BITS && PIXELS",
     description: 'Tiny snippet reminders',
     themeConfig: {
         nav: [
@@ -27,5 +27,19 @@ module.exports = {
                 }
             }
         ],
+        [
+            'vuepress-plugin-rss',
+            {
+                base_url: '/blog/', // required
+                site_url: 'https://bitsnpixels.io', // required
+                copyright: 'Petter Hoel', // optional
+                // filter some post
+                filter: (frontmatter) => {
+                    return [true|false]
+                    },
+                // How much articles
+                count: 20
+            }
+        ],
     ]
-  }
+  };

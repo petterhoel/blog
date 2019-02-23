@@ -1,12 +1,33 @@
+<style scoped>
+    h2 {
+        margin-bottom: 0;
+        margin-top: 32px;
+    }
+    .published {
+        font-size: .7em;
+    }
+    p {
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+    .readme {
+        text-transform: uppercase;
+        font-size: .7em;
+    }
+</style>
+
 <template>
 <div>
     <div v-for="post in posts">
         <h2>
             <router-link :to="post.path">{{ post.frontmatter.title }}</router-link>
-        </h2>   
-        {{ formatDate(post.frontmatter.date)}}     
+        </h2>
+        <span class="published">Published {{formatDate(post.frontmatter.date)}}</span>
         <p>{{ post.frontmatter.description }}</p>
-        <p><router-link :to="post.path">Read on...</router-link></p>
+        <p>
+            <router-link :to="post.path" class="link">
+                <span class="readme">readme</span>
+            </router-link></p>
     </div>
 </div>
 </template>
