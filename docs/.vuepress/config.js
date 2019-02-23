@@ -1,5 +1,5 @@
 module.exports = {
-    title: "BITS && PIXELS",
+    title: "Bits && Pixels",
     description: 'Tiny snippet reminders',
     themeConfig: {
         nav: [
