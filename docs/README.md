@@ -1,1 +1,1 @@
-<RootRedirecter />
+<PageRedirecter />
