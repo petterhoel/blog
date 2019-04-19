@@ -13,9 +13,22 @@ const updated_transformer = {
     }
 }
 
+const theme_color = '#d4d8e6';
+
 module.exports = {
     title: "Bits && Pixels",
     description: 'Tiny snippet reminders for a developer.',
+    head: [
+        ['link', { rel: 'icon', href: '/assets/images/touch/icon.png' }],
+        ['link', { rel: 'mainfest', href: '/manifest.webmanifest' }],
+        ['meta', { name: 'theme-color', content: theme_color }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['link', { rel: 'apple-touch-icon', href: '/assets/images/touch/icon152x152.png' }],
+        ['link', { rel: 'mask-icon', href: '/assets/images/touch/transparent.svg', color: theme_color }],
+        ['meta', { name: 'msapplication-TileImage', content: '/assets/images/touch/icon144x144.png' }],
+        ['meta', { name: 'msapplication-TileColor', content: theme_color }],
+    ],
     themeConfig: {
         nav: [
             { text: 'Blog', link: '/blog/' },
