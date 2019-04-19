@@ -15,14 +15,14 @@ const updated_transformer = {
 
 module.exports = {
     title: "Bits && Pixels",
-    description: 'Tiny snippet reminders for a dev',
+    description: 'Tiny snippet reminders for a developer.',
     themeConfig: {
         nav: [
             { text: 'Blog', link: '/blog/' },
             { text: 'What\'s this?', link: '/about/' },
         ],
         repo: 'petterhoel/blog',
-        lastUpdated: 'Last Updated',
+        lastUpdated: 'Last updated',
     },
     plugins: [
         '@vuepress/blog',
