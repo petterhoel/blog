@@ -4,6 +4,7 @@
   "start_url": "/",
   "display": "minimal-ui",
   "background_color": "#d4d8e6",
+  "theme_color": "#d4d8e6",
   "description": "Tiny snippet reminders for a developer.",
   "icons": [
     {
