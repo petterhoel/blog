@@ -19,7 +19,7 @@ Did some quick checks and it seems the listener is scoped to the DOM-level it is
 Super handy for those tiny interaction and accessability behaviour improvements.
 
 
-And whaddaya know - you can chain keys for key combos 🤗 Thanks to [Juliano](https://twitter.com/julianopavel) for pointing that out.
+And whaddaya know – you can chain keys for key combos 🤗 Thanks to [Juliano](https://twitter.com/julianopavel) for pointing that out.
 ```
 (keydown.control.i)="displayInfo()"
 ```
