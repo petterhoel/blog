@@ -20,7 +20,7 @@ module.exports = {
     description: 'Tiny snippet reminders for a developer.',
     head: [
         ['link', { rel: 'icon', href: '/assets/images/touch/icon.png' }],
-        ['link', { rel: 'mainfest', href: '/manifest.json' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
         ['meta', { name: 'theme-color', content: theme_color }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
         ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
