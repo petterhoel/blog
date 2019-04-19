@@ -21,9 +21,9 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/assets/images/touch/icon.png' }],
         ['link', { rel: 'manifest', href: '/manifest.json' }],
-        ['meta', { name: 'theme-color', content: theme_color }],
+        ['meta', { name: 'theme-color', content: '#fbfbff' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: '#fbfbff' }],
         ['link', { rel: 'apple-touch-icon', href: '/assets/images/touch/icon-152x152.png' }],
         ['link', { rel: 'mask-icon', href: '/assets/images/touch/icon.svg', color: theme_color }],
         ['meta', { name: 'msapplication-TileImage', content: '/assets/images/touch/icon-144x144.png' }],
