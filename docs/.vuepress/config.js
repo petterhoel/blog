@@ -26,6 +26,7 @@ module.exports = {
     },
     plugins: [
         '@vuepress/blog',
+        [ '@vuepress/pwa'],
         [ '@vuepress/google-analytics', analytics_info ],
         [ '@vuepress/last-updated', updated_transformer ],
         [ 'feed', feed_options ],
