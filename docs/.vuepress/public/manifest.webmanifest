@@ -10,31 +10,31 @@
     "sizes": "72x72",
     "type": "image/png"
   }, {
-    "src": "assets/images/touch/icon96x96.png",
+    "src": "assets/images/touch/icon-96x96.png",
     "sizes": "96x96",
     "type": "image/png"
   }, {
-    "src": "assets/images/touch/icon128x128.png",
+    "src": "assets/images/touch/icon-128x128.png",
     "sizes": "128x128",
     "type": "image/png"
   }, {
-    "src": "assets/images/touch/icon144x144.png",
+    "src": "assets/images/touch/icon-144x144.png",
     "sizes": "144x144",
     "type": "image/png"
   }, {
-    "src": "assets/images/touch/icon152x152.png",
+    "src": "assets/images/touch/icon-152x152.png",
     "sizes": "152x152",
     "type": "image/png"
   }, {
-    "src": "assets/images/touch/icon192x192.png",
+    "src": "assets/images/touch/icon-192x192.png",
     "sizes": "192x192",
     "type": "image/png"
   }, {
-    "src": "assets/images/touch/icon384x384.png",
+    "src": "assets/images/touch/icon-384x384.png",
     "sizes": "384x384",
     "type": "image/png"
   }, {
-    "src": "assets/images/touch/icon512x512.png",
+    "src": "assets/images/touch/icon-512x512.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
