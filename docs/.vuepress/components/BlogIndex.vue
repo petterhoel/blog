@@ -26,7 +26,7 @@
         <p>{{ post.frontmatter.description }}</p>
         <p>
             <router-link :to="post.path" class="link">
-                <span class="readme">readme</span>
+                <a class="readme">readme</a>
             </router-link></p>
     </div>
 </div>
