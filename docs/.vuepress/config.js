@@ -5,13 +5,6 @@ const feed_options = {
 const analytics_info = {
     'ga': 'UA-135025003-1'
 }
-const updated_transformer = {
-    transformer: (timestamp, lang) => {
-        const moment = require('moment');
-        moment.locale(lang);
-        return moment(timestamp).fromNow();
-    }
-}
 
 const theme_color = '#d4d8e6';
 
@@ -42,7 +35,15 @@ module.exports = {
         '@vuepress/blog',
         [ '@vuepress/pwa'],
         [ '@vuepress/google-analytics', analytics_info ],
-        [ '@vuepress/last-updated', updated_transformer ],
+        ['@vuepress/last-updated', {
+            transformer: (timestamp, lang) => {
+                // Don't forget to install moment yourself
+                const moment = require('moment')
+                moment.locale(lang)
+                return moment(timestamp).fromNow()
+                }
+            }
+        ],
         [ 'feed', feed_options ],
     ]
   };
