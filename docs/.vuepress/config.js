@@ -40,7 +40,7 @@ module.exports = {
                 // Don't forget to install moment yourself
                 const moment = require('moment')
                 moment.locale(lang)
-                return moment(timestamp).fromNow()
+                return moment(timestamp).format('MMMM Do YYYY')
                 }
             }
         ],
