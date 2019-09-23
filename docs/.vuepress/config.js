@@ -34,10 +34,10 @@ module.exports = {
     plugins: [
         '@vuepress/blog',
         [ '@vuepress/pwa'],
-        [ '@vuepress/google-analytics', analytics_info ],
+        ['@vuepress/google-analytics', analytics_info],
+        ['@dovyp/vuepress-plugin-clipboard-copy', true],
         ['@vuepress/last-updated', {
             transformer: (timestamp, lang) => {
-                // Don't forget to install moment yourself
                 const moment = require('moment')
                 moment.locale(lang)
                 return moment(timestamp).format('MMMM Do YYYY')
