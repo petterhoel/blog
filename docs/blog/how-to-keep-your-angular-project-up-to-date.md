@@ -12,7 +12,7 @@ The hardest thing about keeping an Angular project up to date is typing this com
 npm run ng update @angular/cli@next @angular/core@next -- --force
 ```
 
-Force flag is because the new version are likely out of scope og third party dependencies in your project. The flag means: ignore whatever warnings and errors are occuring. Sounds somewhat dangerous, but the Angular compiler should recompile theese libraries in a compatible fashion so forcing should be safe.
+Force flag is because the new version are likely out of scope for third party dependencies in your project. The flag means: ignore whatever warnings and errors are occuring. Sounds somewhat dangerous, but the Angular compiler should recompile theese libraries in a compatible fashion so forcing should be safe.
 
 In fact if it causes problems the Angular team will be thankful if you report it so they can resolve the issue. They put in a lot of effort keeping the ecosystem and upgrade experience pain free across versions and dependencies.
 
