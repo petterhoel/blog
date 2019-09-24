@@ -5,7 +5,7 @@ pageClass: hide-updated
 
 # What is this then?
 <p>
-<img src="../assets/images/petter.jpg" alt="petters face" class="about-image">
+<img src="../assets/images/petter-2.jpg" alt="petters face" class="about-image">
 
 **The bits and the pixels** – there is so much to them...
 
