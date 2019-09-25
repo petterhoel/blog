@@ -1,7 +1,7 @@
 ---
 title: "Terminal goodies: Awesome 🤩, but forgettable 🕸"
-date: 2019-04-15
-description: Names and commands that makes life better
+date: 2019-09-25
+description: Files and commands that makes life better
 author: Petter
 ---
 # Terminal goodies - Awesome 🤩, but forgettable 🕸
