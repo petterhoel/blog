@@ -33,7 +33,7 @@ module.exports = {
     },
     plugins: [
         '@vuepress/blog',
-        [ '@vuepress/pwa'],
+        ['@vuepress/pwa'],
         ['@vuepress/google-analytics', analytics_info],
         ['@dovyp/vuepress-plugin-clipboard-copy', true],
         ['@vuepress/last-updated', {
