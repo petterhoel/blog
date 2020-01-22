@@ -26,13 +26,13 @@ if (text in communityMessage && !communityMessage.text) {
 
 ```
 
-Example with valueless data attributes. Here cancel would be `''` and falsy, so we wanna check if property is there to find out what kind of button we are dealing with.
+Example with valueless data attributes. Here cancel would be `''` and falsy for the second button, so we wanna check if property is there to find out what kind of button we are dealing with.
 ``` html
 <button ...>Go ahead</button>
 <button data-cancel ...>Abort mission</button>
 ```
 ``` js
-const buttons = document.querySelector('button');
+const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', handleClick));
 
 function handleClick(event) {
