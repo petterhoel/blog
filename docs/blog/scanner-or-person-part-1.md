@@ -13,50 +13,55 @@ A client wanted to use a barcode scanner with a web app we were making. Normal u
 - Free text inputs such as `<input>` and `<textarea>` should be able to ignore values from the scanner. (This will be addressed un an upcoming Part 2)
 
 #### Other requirements
+
 - Scanner is to be used as a keyboard wedge without modification or custom setup. This is to ease any work outside of development related to operations: setup, maintenance, cross-application use etc.
 - ![Example bar code encoding the text *WIKIPEDIA*](https://upload.wikimedia.org/wikipedia/commons/0/0b/Code_3_of_9.svg#small "Example bar code")We are scanning [Code 39 bar codes](https://en.wikipedia.org/wiki/Code_39) like this one from Wikipedia. In other words your everyday bar codes.
 
 
-## #1 Can we programatically separate events by device?
-If we knew the devicetype we could just have a simpe `if`. For example:
+## #1 Can we programmatically separate events by device?
+
+If we knew the device type we could just have a simple `if`. For example:
 ``` ts
 // i'm making this up
-if (event.deviceType !== 'KEYBOARD') {
+if (event.deviceType === 'SCANNER') {
 	handleAsScanner(event);
 }
 ```
 ⛔ Maybe some day web-usb will allow something like this in a nice cross-browser fashion. But as of now, no cigar 😰.
 
-## #2 Can we separate events programatically by behaviour?
+## #2 Can we separate events programmatically by behavior?
+
 😆 Probably!
 Machines tend to behave predictably. Humans, not so much.
-A little bit of googeling and we found some inspiration [online](https://web.archive.org/web/20150316093927/http://nicholas.piasecki.name/blog/2009/02/distinguishing-barcode-scanners-from-the-keyboard-in-winforms).
+A little bit of googling and I found some inspiration [online](https://web.archive.org/web/20150316093927/http://nicholas.piasecki.name/blog/2009/02/distinguishing-barcode-scanners-from-the-keyboard-in-winforms).
 
 > TL;DR: Your scanner will fire events rapidly and consistently. Your user won't.
 
 ## Initial investigation
-On my developer machine we measured scanner event interval to be quite steady ~7-8ms. However sometimes there was a longer interval ~16ms. A whole lot of test scanning later this behaviour seemed to be quite consistant. To give some leeway we thought: Ok lets propose a theshold at 20ms, forming the rule: Machine will produce next event in under 20ms.
-> Machine will produce next event in under 20ms.
+On my developer machine we measured scanner event interval to be quite steady ~7-8 ms. However sometimes there was a longer interval ~16 ms. A whole lot of test scanning later this behavior seemed to be quite consistent. To give some leeway we thought: Ok lets propose a threshold at 20 ms, forming the rule: Machine will produce next event in under 20 ms.
+> Machine will produce next event in under 20 ms.
 
-So far we had only measured the machines beaviour. I am a slow typer, but some people type at impressive speeds. So next step was mesuring event intervals from a human source. Problem: Slow typer. Solution: Act like a fast typer by not caring what is being typed 🙄 😹. Silly, but more than good enough for our purposes.
+So far we had only measured the machines behavior. I am a slow typist, but some people type at impressive speeds. So next step was measuring event intervals from a human source. Problem: Slow typist. Solution: Act like a fast typist by not caring what is being typed 🙄 😹. Silly, but more than good enough for our purposes.
 
-Smashing the keyboard as fast as I could revieled that humans can also generate a sequence of events under 20ms. Is all hope lost? Well as always, it depends.
+Smashing the keyboard as fast as I could revealed that humans can also generate a sequence of events under 20ms. Is all hope lost? Well as always, it depends.
 
-Spesifically it depends on the lenght of the strings you are scanning. We kept quicktyping and were able to generate 2 keystokes with intervals under 20ms quite easy, three keystrokes was hard, but doable. 4 kestokes we could not manage without a 20ms gap between some of the keystrokes. Our use case was 8 character string minimum so we had just found another useful rule. It is a machine producing the events if 4 or more keybord events happen sequentually with no more than 20ms gap between each.
+Specifically it depends on the length of the strings you are scanning. We kept typing fast and were able to generate 2 key stokes with intervals under 20ms quite easy, three keystrokes was hard, but doable. 4 key stokes we could not manage without a 20ms gap between some of the keystrokes. Our use case was 8 character string minimum so we had just found another useful rule. It is a machine producing the events if 4 or more keyboard events happen sequentially with no more than 20ms gap between each.
 
-> It is a machine producing the events if 4 or more keybord events happen sequentually with no more than 20ms gap between each.
+> It is a machine producing the events if 4 or more keyboard events happen sequentially with no more than 20ms gap between each.
 
 This starts to look like something we could write code towards. But first:
 
-## A note on perfomance: a caveat
+## A note on performance: a caveat
+
 > Results can therefore not be guaranteed.
 
-Let us be clear here, even before we get into the code. This approach relies on event timings. That again relies on hardware, os and browser performace. In other words desired behaviour is tightly bound to compute environment and its workload at runtime. Results can therefore not be guaranteed. Know your use case, test to see if this approach works for you.
-
+Let us be clear here, even before we get into the code. This approach relies on event timings. That again relies on hardware, OS and browser performance. In other words desired behavior is tightly bound to compute environment and its workload at runtime. Results can therefore not be guaranteed. Know your use case, test to see if this approach works for you.
 
 ## Code
-Let' s look at som code and break this down somewhat (A full example will be near the end). The project is closed source, but this was a cool client who did not mind sharing this part of the code base. We will look at both main use cases.
-1. A global scanner event handler that colletcs scanner values but ignores human typing.
+
+Let' s look at some code and break this down somewhat (A full example will be near the end). The project is closed source, but this was a cool client who did not mind sharing this part of the code base. We will look at both main use cases.
+
+1. A global scanner event handler that collects scanner values but ignores human typing.
 2. A local event handler that ignores the scanner and only cares about input by a human. Think of this as a filter you can apply to your `<input>` or `<textarea>`. (See upcoming part 2)
 
 This was an Angular🥰 project, but there is no reason it could not be done in any other js-framework or vanilla 🤓.
@@ -64,6 +69,7 @@ This was an Angular🥰 project, but there is no reason it could not be done in 
 ### #1 ScannerService: a global listener for scanned values 🌏🦻
 
 #### Bring the pseudo code
+
 ``` ts
 // Listen for all keyboard events.
 // Buffer values.
@@ -72,7 +78,9 @@ This was an Angular🥰 project, but there is no reason it could not be done in 
 ```
 
 #### Listen for all keyboard events
+
 This is just a way to do `document.addEventListener(...)` in Angular
+
 ``` ts
 this.rendener.listen(
 	'document',
@@ -81,9 +89,11 @@ this.rendener.listen(
 ```
 
 #### Handle the event
+
 Birdseye view of the event handling: Collect events >> Set up a timeout >> If there has been less than 4 events and we are timing out we clear our buffer >> However if there has been 4 or more events we take action and then clear our buffer.
+
 - `this.events` is our buffer.
-- `this.interval` is out timeeout threshold set to 20ms.
+- `this.interval` is out timeout threshold set to 20 ms.
 
 ``` ts
 handleKeyUp(event: KeyboardEvent): void {
@@ -107,6 +117,7 @@ handleKeyUp(event: KeyboardEvent): void {
 ```
 
 #### Collecting events
+
 ``` ts
 // collecting events to the buffer eg this.events
 private collectValue(event: KeyboardEvent): void {
@@ -118,8 +129,8 @@ private collectValue(event: KeyboardEvent): void {
 ```
 
 #### Update values
-We collect whatever is collected in the buffer as a string and announce that value to the world. Announcing was handled in an external service in our application. Basically a simple store that exposed new scanner values. The components that would care about new scanner values would not know about our `ScannerService` or how the values was collected. They would just ask `ScannerValueServie` to feed them most recent values. In other words `ScannerValueServie` was a slim proxy resposible for delivering new values. In our app this was impemented using [RXJS](https://github.com/Reactive-Extensions/RxJS) with [Observables](https://rxjs.dev/guide/observable) and [BehaviorSubject](https://www.learnrxjs.io/learn-rxjs/subjects/behaviorsubject).
 
+We collect whatever is collected in the buffer as a string and announce that value to the world. Announcing was handled in an external service in our application. Basically a simple store that exposed new scanner values. The components that would care about new scanner values would not know about our `ScannerService` or how the values was collected. They would just ask `ScannerValueServie` to feed them most recent values. In other words `ScannerValueServie` was a slim proxy responsible for delivering new values. In our app this was implemented using [RXJS](https://github.com/Reactive-Extensions/RxJS) with [Observables](https://rxjs.dev/guide/observable) and [BehaviorSubject](https://www.learnrxjs.io/learn-rxjs/subjects/behaviorsubject).
 
 ``` ts
 private updateValues(): void {
@@ -137,9 +148,10 @@ private eventsToString(): string {
 }
 ```
 
-
 #### Complete `ScannerService`
+
 Heads up: There may be 🐛🐛🐛. The code is changed somewhat for simplification and to obscure my client. It has not been tested, and should be used as a guide rather than a battle tested implementation.
+
 ``` ts
 @Injectable({
 	providedIn: 'root'
