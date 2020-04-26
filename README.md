@@ -1,7 +1,9 @@
 # bits && pixels blog
 
-[bitsnpixles.io](https://bitsnpixels.io)  
+[bitsnpixles.dev](https://bitsnpixels.dev)  
 This is a place for reminders and thoughts on whatever I come across as a developer that I find reassuring to have a permalink for.
+
+(i am no longer using the .io domain extention on account of the [colonialism issue](https://gigaom.com/2014/06/30/the-dark-side-of-io-how-the-u-k-is-making-web-domain-profits-from-a-shady-cold-war-land-deal/))
 
 ## Getting Started
 
