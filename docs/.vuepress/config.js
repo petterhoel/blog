@@ -22,11 +22,21 @@ module.exports = {
         ['meta', { name: 'msapplication-TileImage', content: '/assets/images/touch/icon-144x144.png' }],
         ['meta', { name: 'msapplication-TileColor', content: theme_color }],
     ],
+    globalUIComponents: [
+        'ExternalResources'
+    ],
     themeConfig: {
         nav: [
             { text: 'Blog', link: '/blog/' },
             { text: 'What\'s this?', link: '/about/' },
         ],
+        sidebar: {
+            '/foo/': [
+                '',     /* /foo/ */
+                'one',  /* /foo/one.html */
+                'two'   /* /foo/two.html */
+            ]
+        },
         logo: '/assets/images/touch/icon.svg',
         repo: 'petterhoel/blog',
         lastUpdated: 'Last updated',

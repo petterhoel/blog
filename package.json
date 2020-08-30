@@ -6,13 +6,13 @@
     },
     "devDependencies": {
         "@dovyp/vuepress-plugin-clipboard-copy": "1.0.0-alpha.7",
-        "@vuepress/plugin-blog": "1.8.1",
-        "@vuepress/plugin-google-analytics": "1.2.0",
-        "@vuepress/plugin-pwa": "1.2.0",
+        "@vuepress/plugin-blog": "1.9.2",
+        "@vuepress/plugin-google-analytics": "1.5.4",
+        "@vuepress/plugin-pwa": "1.5.4",
         "vuepress-plugin-feed": "0.1.8"
     },
     "dependencies": {
-        "moment": "2.24.0",
-        "vuepress": "1.2.0"
+        "moment": "2.27.0",
+        "vuepress": "1.5.4"
     }
 }
