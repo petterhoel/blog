@@ -1,5 +1,5 @@
 const feed_options = {
-    canonical_base: 'https://bitsnpixels.io',
+    canonical_base: 'https://bitsnpixels.dev',
 };
 const theme_color = '#d4d8e6';
 
