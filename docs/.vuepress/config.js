@@ -1,11 +1,6 @@
 const feed_options = {
     canonical_base: 'https://bitsnpixels.io',
 };
-
-const analytics_info = {
-    'ga': 'UA-135025003-1'
-}
-
 const theme_color = '#d4d8e6';
 
 module.exports = {
@@ -44,7 +39,6 @@ module.exports = {
     plugins: [
         '@vuepress/blog',
         ['@vuepress/pwa'],
-        ['@vuepress/google-analytics', analytics_info],
         ['@dovyp/vuepress-plugin-clipboard-copy', true],
         ['@vuepress/last-updated', {
             transformer: (timestamp, lang) => {
