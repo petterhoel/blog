@@ -42,7 +42,7 @@ navigate to [localhost:8080](http://localhost:8080)
 thank you for playing! but our tests are in another castle
 ```
 
-## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/fcee5757-7d0e-43e6-b441-28bd554805ba/deploy-status)](https://app.netlify.com/sites/gallant-mahavira-2e103d/deploys)
+## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/fcee5757-7d0e-43e6-b441-28bd554805ba/deploy-status)](https://app.netlify.com/sites/bitsnpixels/deploys)
 A merge to master will deploy _this_ site. 
 
 If you are using this as a starter for your own project you wanna run 

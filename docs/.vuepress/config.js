@@ -25,13 +25,6 @@ module.exports = {
             { text: 'Blog', link: '/blog/' },
             { text: 'What\'s this?', link: '/about/' },
         ],
-        sidebar: {
-            '/foo/': [
-                '',     /* /foo/ */
-                'one',  /* /foo/one.html */
-                'two'   /* /foo/two.html */
-            ]
-        },
         logo: '/assets/images/touch/icon.svg',
         repo: 'petterhoel/blog',
         lastUpdated: 'Last updated',
