@@ -8,7 +8,7 @@ author: Petter
 
 With top level statements in c#9 and dotnet 5 there is really little code needed to have a working web api. 
 
-Prerequsite: [Download and install .Net 5 SDK](https://dotnet.microsoft.com/download). 
+Prerequisite: [Download and install .Net 5 SDK](https://dotnet.microsoft.com/download). 
 
 Over in your terminal:
 
