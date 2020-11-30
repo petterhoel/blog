@@ -38,6 +38,7 @@
 <aside id="external-resources">
   <h2>External goodies 🥰</h2>
   <ul>
+    <li><a href="https://austingil.com/how-to-build-html-forms-right-semantics" target="_blank" rel="noopener noreferrer">Build Html Forms Right</a> By Austin Gil</li>
     <li><a href="https://bhagesh.tech/trick-to-write-css-and-html-100x-faster" target="_blank" rel="noopener noreferrer">Emmet cheatcheet</a> By Bhagesh Hunakunti</li>
     <li><a href="https://modern-web.dev" target="_blank" rel="noopener noreferrer" class="repo-link">Modern web</a>By modernweb-dev</li>
   </ul>
