@@ -17,5 +17,4 @@ However I find communication is the most important skill for _any_ developer. _D
 
 This is a place for reminders and thoughts on whatever I come across as a developer that makes me wanna permalink it.
 
-Get in touch? [ping me on twitter](https://twitter.com/petterhoel "@petterhoel").
 </p>
