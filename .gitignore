@@ -7,3 +7,7 @@ docs/.vuepress/dist
 **.xml
 *.iml
 .vscode/settings.json
+
+
+.DS_Store
+.idea/
