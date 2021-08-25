@@ -31,13 +31,19 @@ module.exports = {
     },
     plugins: [
         '@vuepress/blog',
-        ['@vuepress/pwa'],
+        ['@vuepress/pwa', {
+          serviceWorker: true,
+          updatePopup: {
+            message: "There is new content ",
+            buttonText: "Refresh"
+          }
+        }],
         ['@dovyp/vuepress-plugin-clipboard-copy', true],
         ['@vuepress/last-updated', {
             transformer: (timestamp, lang) => {
-                const moment = require('moment')
-                moment.locale(lang)
-                return moment(timestamp).format('MMMM Do YYYY')
+                const moment = require('moment');
+                moment.locale(lang);
+                return moment(timestamp).format('MMMM Do YYYY');
                 }
             }
         ],
