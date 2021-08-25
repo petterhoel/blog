@@ -1,7 +1,7 @@
 ---
 title: Import Your Angular Scss Files in Storybook 
 date: 2021-08-25
-description: How to deal with styles from external *.scss files when working with storybook
+description: How to deal with styles from global/external *.scss files when working with storybook
 tags: storybook, nx, angular , scss, sass
 author: Petter
 ---
@@ -38,7 +38,7 @@ Storybook allows for manipulating the body by including a custom file named `pre
  |--main.js
  |--preview.js
  |--style-loader.scss
- |--preview-body.html << add this if you have custom stuff to include
+ |--preview-body.html 🆕
 ```
 
 So we could do something like this
