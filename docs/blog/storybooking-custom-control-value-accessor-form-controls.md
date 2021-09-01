@@ -2,7 +2,6 @@
 title: Storybooking Custom Control Value Accessor Form Controls 
 date: 2021-08-25
 description: Use Storybook.js with Angular Components that implements ControlValueAccessor
-tags: storybook, nx, angular, forms, ControlValueAccessor
 author: Petter
 ---
 # Storybooking Custom ControlValueAccessor Form Controls

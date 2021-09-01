@@ -2,7 +2,6 @@
 title: Import Your Angular Scss Files in Storybook 
 date: 2021-08-25
 description: How to deal with styles from global/external *.scss files when working with storybook
-tags: storybook, nx, angular , scss, sass
 author: Petter
 ---
 # Import Your Angular Scss Files in Storybook
