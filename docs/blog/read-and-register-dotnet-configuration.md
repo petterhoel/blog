@@ -8,7 +8,7 @@ author: Petter
 
 This is a task that I seldom do. It is usually only done at the start of a project or when adding subtansial features. And I always have to look it up. 
 
-In the standard webapp-template for dotnet, the configuration class is injected into the `Startup.cs` file. However, some projects lives quite well without `Startup.cs`. Think worker services or the new slim and hip new style of top level `Program.cs`. We will see how to get a hold of configuration, read the content into classes and register them with the Dependency Injection Engine in .net. We will also see it in use. 
+In the standard webapp-template for dotnet, the configuration class is injected into the `Startup.cs` file. However, some projects live quite well without `Startup.cs`. Think worker services or the new slim and hip new style of top level `Program.cs`. We will see how to get a hold of configuration, read the content into classes and register them with the Dependency Injection Engine in .net. We will also see it in use. 
 
 Our example is a very useful 🐱-based background service. 
 
