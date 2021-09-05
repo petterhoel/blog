@@ -1,14 +1,14 @@
 ---
 title: "Read and register .Net configuration"
 date: 2021-09-04
-description: How ro read and register configuration on app startup in .Net and use it with Dependency Injection later on 😻
+description: How to read and register configuration on app startup in .Net and use it with Dependency Injection later on 😻
 author: Petter
 ---
 # How ro read and register configuration on app startup in .Net
 
 This is a task that I seldom do. It is usually only done at the start of a project or when adding subtansial features. And I always have to look it up. 
 
-In the standard webapp-template for dotnet, the configuration class is injected into the `Startup.cs` file. However, some projects live quite well without `Startup.cs`. Think worker services or the new slim and hip new style of top level `Program.cs`. We will see how to get a hold of configuration, read the content into classes and register them with the Dependency Injection Engine in .net. We will also see it in use. 
+In the standard webapp-template for .Net, the configuration class is injected into the `Startup.cs` file. However, some projects live quite well without `Startup.cs`. Think worker services or the new slim and hip new style of top level `Program.cs`. We will see how to get a hold of configuration, read the content into classes and register them with the Dependency Injection Engine in .Net. We will also see it in use. 
 
 Our example is a very useful 🐱-based background service. 
 
@@ -59,7 +59,7 @@ await Host
     .RunAsync();
 ```
 
-And now to the point. What is `.ReadConfigAndAddConfigAndWorker()` and what does it do. It is a builder-pattern extention method we will write and use to do all the config related stuff. 
+And now to the main point. What is `.ReadConfigAndAddConfigAndWorker()` and what does it do. It is a builder-pattern extention method we will write and use to do all the config related stuff. 
 
 ```csharp
 // ConfigLoaderHelper.cs
