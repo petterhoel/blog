@@ -2,7 +2,7 @@
   "name": "Bits && Pixels",
   "short_name": "Bits && Pixels",
   "start_url": "/",
-  "display": "minimal-ui",
+  "display": "standalone",
   "background_color": "#fbfbff",
   "theme_color": "#fbfbff",
   "description": "Tiny snippet reminders for a developer.",
