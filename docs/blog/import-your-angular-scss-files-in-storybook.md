@@ -6,6 +6,76 @@ author: Petter
 ---
 # Import Your Angular Scss Files in Storybook
 
+
+## For projects >= Angular 13.1
+Things kind of broke when Angular 13 came out and I could not get gobal styles to happen. Between Nx, Storybook and Angular there was a myraid of issues on GitHub. I gave up trying and waited it out.
+
+However things seem to have stabilized. You no longer need `preview.js` and `style-loader.scss`. Instead you point to your styles in your `project.json` or `workspace.json`. Like this:
+
+```json
+// <project-root>/libs/<lib-name>/project.json
+{
+    ...
+
+  "storybook": {
+    "executor": "@nrwl/storybook:storybook",
+    "options": {
+        "uiFramework": "@storybook/angular",
+        "port": 4400,
+        "config": {
+        "configFolder": "libs/<lib-name>/.storybook"
+        },
+        "projectBuildConfig": "<lib-name>:build-storybook"
+    },
+    "configurations": {
+        "ci": {
+        "quiet": true
+        }
+      }
+    },
+  
+  "build-storybook": {
+    "executor": "@nrwl/storybook:build",
+    "outputs": [
+        "{options.outputPath}"
+    ],
+    "options": {
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/storybook/<lib-name>",
+        "config": {
+        "configFolder": "libs/<lib-name>/.storybook"
+        },
+        "projectBuildConfig": "<lib-name>:build-storybook",
+        "styles": ["./apps/lab-app/src/styles.scss"] 👈
+    },
+    "configurations": {
+        "ci": {
+        "quiet": true
+        }
+      }
+    }
+
+    ...
+
+}
+```
+## Relevant versions where it works
+```json
+// package.json
+{
+  "dependencies": {
+    "@angular/<...>": "13.2.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/<...>": "13.2.2",
+    "@angular/<...>": "13.2.2",
+    "@nrwl/<...>": "13.8.0",
+    "@storybook/<...>": "6.4.18"
+  }
+}
+```
+
+## For project before Angular 13
 Most commonly there is a need to include som set of global or external styles for storybooking Angular projects. As many use cases as there is ways of organizing styles I guess 😅
 
 Add a file responsible for importing styles. 
