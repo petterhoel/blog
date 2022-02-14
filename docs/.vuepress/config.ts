@@ -1,9 +1,12 @@
+import { defineConfig } from "vuepress/config";
+import moment from 'moment';
+
 const feed_options = {
     canonical_base: 'https://bitsnpixels.dev',
 };
 const theme_color = '#d4d8e6';
 
-module.exports = {
+export default defineConfig({
     title: "Bits && Pixels",
     description: 'Tiny snippet reminders for a developer.',
     head: [
@@ -30,18 +33,17 @@ module.exports = {
         lastUpdated: 'Last updated',
     },
     plugins: [
-        '@vuepress/blog',
+        ['@vuepress/blog'],
         ['@vuepress/pwa', {
           serviceWorker: true,
           updatePopup: {
-            message: "There is new content ",
+            message: "Please refresh for updates",
             buttonText: "Refresh"
           }
         }],
         ['@dovyp/vuepress-plugin-clipboard-copy', true],
         ['@vuepress/last-updated', {
             transformer: (timestamp, lang) => {
-                const moment = require('moment');
                 moment.locale(lang);
                 return moment(timestamp).format('MMMM Do YYYY');
                 }
@@ -49,4 +51,4 @@ module.exports = {
         ],
         [ 'feed', feed_options ],
     ]
-  };
+  })
