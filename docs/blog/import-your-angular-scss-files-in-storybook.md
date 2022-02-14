@@ -46,7 +46,7 @@ However things seem to have stabilized. You no longer need `preview.js` and `sty
         "configFolder": "libs/<lib-name>/.storybook"
         },
         "projectBuildConfig": "<lib-name>:build-storybook",
-        "styles": ["./apps/lab-app/src/styles.scss"] 👈
+        "styles": ["./apps/<app-name>/src/styles.scss"] 👈
     },
     "configurations": {
         "ci": {
