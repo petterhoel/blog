@@ -1,4 +1,5 @@
 import { defineConfig } from "vuepress/config";
+// @ts-ignore
 import moment from 'moment';
 
 const feed_options = {
