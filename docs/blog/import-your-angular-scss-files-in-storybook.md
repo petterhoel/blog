@@ -5,7 +5,7 @@ description: How to deal with styles from global/external *.scss files when work
 author: Petter
 ---
 # Import Your Angular Scss Files in Storybook
-
+***update: June 1st 2022***: If you are using Nx `>=14.1.8` this is now more straight forward and nx has quite [clear docs here](https://nx.dev/storybook/extra-topics-for-angular-projects#configuring-styles-and-preprocessor-options)
 
 ## For projects >= Angular 13.1
 Things kind of broke when Angular 13 came out and I could not get gobal styles to happen. Between Nx, Storybook and Angular there was a myraid of issues on GitHub. I gave up trying and waited it out.
