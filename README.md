@@ -15,30 +15,32 @@ You need [npm](https://nodejs.org/) on your machine, an evergreen browser and pr
 ### Installing
 
 Clone this repo
-```
-> git clone https://github.com/petterhoel/blog.git
+```shell
+git clone https://github.com/petterhoel/blog.git
 ```
 Change directory
-```
-> cd blog
+```shell
+cd blog/docs
 ```
 
 Install dependencies
-```
-> npm install
+```shell
+npm install
 ```
 
 Spin up the dev server
 
-```
-> npm run docs:dev 
+```shell
+npm run dev 
 ```
 navigate to [localhost:8080](http://localhost:8080)
 
 ## Running the tests
 
-```
-thank you for playing! but our tests are in another castle
+```shell
+# Thank you for playing! 
+# But our tests are in another castle
+# 🍄 🐢 👸 🪹
 ```
 
 ## Deployment
@@ -46,13 +48,13 @@ A merge to master will deploy _this_ site.
 
 If you are using this as a starter for your own project you wanna run 
 
-```
-> npx vuepress build
+```shell
+npm run dev
 ``` 
 
-That will create all the static files for your site and place them in ```.vuepress/dist```. Copy these files to your sites root folder. 
+That will create all the static files for your site and place them in ```/src/.vuepress/dist```. Copy these files to your sites root folder. 
 
-This projects uses [Cloudflare](https://www.cloudflare.com) for that. 
+This projects uses [Cloudflare Pages](https://www.cloudflare.com) for that. 
 
 ## Built With
 
