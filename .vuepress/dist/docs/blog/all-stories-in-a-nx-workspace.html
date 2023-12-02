@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>All stories in a nx workspace</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="How to set up a storybook containing all stories in a nx repo.">
+    
+    <link rel="preload" href="/assets/css/0.styles.7b36eabc.css" as="style"><link rel="preload" href="/assets/js/app.84839d0e.js" as="script"><link rel="preload" href="/assets/js/2.8f2a2afa.js" as="script"><link rel="preload" href="/assets/js/13.101b22ba.js" as="script"><link rel="prefetch" href="/assets/js/10.c867aa14.js"><link rel="prefetch" href="/assets/js/11.b4d4ed3f.js"><link rel="prefetch" href="/assets/js/12.3305d5c6.js"><link rel="prefetch" href="/assets/js/14.5d38269c.js"><link rel="prefetch" href="/assets/js/15.94152cee.js"><link rel="prefetch" href="/assets/js/16.6fd87597.js"><link rel="prefetch" href="/assets/js/17.73103f0d.js"><link rel="prefetch" href="/assets/js/18.f9ff32ba.js"><link rel="prefetch" href="/assets/js/19.ff7555f9.js"><link rel="prefetch" href="/assets/js/20.c024071c.js"><link rel="prefetch" href="/assets/js/21.69276230.js"><link rel="prefetch" href="/assets/js/22.a63fa133.js"><link rel="prefetch" href="/assets/js/23.a27bab8f.js"><link rel="prefetch" href="/assets/js/24.29d5de4f.js"><link rel="prefetch" href="/assets/js/25.28d412a3.js"><link rel="prefetch" href="/assets/js/26.ff74cf23.js"><link rel="prefetch" href="/assets/js/27.1fe43e31.js"><link rel="prefetch" href="/assets/js/28.8780ba33.js"><link rel="prefetch" href="/assets/js/29.b3a5f4cc.js"><link rel="prefetch" href="/assets/js/3.31453e0e.js"><link rel="prefetch" href="/assets/js/30.a0c2163b.js"><link rel="prefetch" href="/assets/js/31.1bd4258a.js"><link rel="prefetch" href="/assets/js/4.e48b681e.js"><link rel="prefetch" href="/assets/js/5.b57ddede.js"><link rel="prefetch" href="/assets/js/6.e56f0864.js"><link rel="prefetch" href="/assets/js/7.dadd32d1.js"><link rel="prefetch" href="/assets/js/8.c9941838.js"><link rel="prefetch" href="/assets/js/9.5301f2c1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7b36eabc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="all-stories-in-a-nx-workspace"><a href="#all-stories-in-a-nx-workspace" class="header-anchor">#</a> All stories in a nx workspace</h1> <h2 id="_1-generate-a-wrapper-library"><a href="#_1-generate-a-wrapper-library" class="header-anchor">#</a> 1 Generate a wrapper library</h2> <p>This library has the lone responsbility of settilng up a storybook that includes all the stories in your workspace</p> <div class="language-shell extra-class"><pre class="language-shell"><code>nx generate @nrwl/angular:storybook-configuration <span class="token parameter variable">--name</span><span class="token operator">=</span>all-stories
+</code></pre></div><h2 id="_2-modify-main-js"><a href="#_2-modify-main-js" class="header-anchor">#</a> 2 Modify main.js</h2> <p>We want <code>main.js</code> to include stories for the whole solution. So we change the <code>stories</code>-value to</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// ./libs/all-stories/.storybook/main.js</span>
+<span class="token keyword">const</span> allStories <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'../../**/*.stories.ts'</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    <span class="token literal-property property">stories</span><span class="token operator">:</span> allStories
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_3-modify-your-typescript-config"><a href="#_3-modify-your-typescript-config" class="header-anchor">#</a> 3 Modify your typescript config</h2> <p>We want to include files from the root of the workspace so we modify the <code>&quot;include&quot;</code>-array in <code>tsconfig.json</code></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">// ./libs/all-stories/.storybook/tsconfig.json</span>
+<span class="token punctuation">{</span>
+  ...
+  <span class="token property">&quot;include&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;../../../**/*.ts&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;*.js&quot;</span><span class="token punctuation">]</span>
+  ...
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_4-thats-it-🎉"><a href="#_4-thats-it-🎉" class="header-anchor">#</a> 4 Thats it! 🎉</h2> <p>Run this and your good to go</p> <div class="language-shell extra-class"><pre class="language-shell"><code>nx storybook all-stories
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.84839d0e.js" defer></script><script src="/assets/js/2.8f2a2afa.js" defer></script><script src="/assets/js/13.101b22ba.js" defer></script>
+  </body>
+</html>

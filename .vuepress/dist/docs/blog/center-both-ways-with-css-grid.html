@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Center Both Ways with Css Grid</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="Use a css one liner to center child horizontally and vertically with css grid.">
+    
+    <link rel="preload" href="/assets/css/0.styles.7b36eabc.css" as="style"><link rel="preload" href="/assets/js/app.84839d0e.js" as="script"><link rel="preload" href="/assets/js/2.8f2a2afa.js" as="script"><link rel="preload" href="/assets/js/15.94152cee.js" as="script"><link rel="prefetch" href="/assets/js/10.c867aa14.js"><link rel="prefetch" href="/assets/js/11.b4d4ed3f.js"><link rel="prefetch" href="/assets/js/12.3305d5c6.js"><link rel="prefetch" href="/assets/js/13.101b22ba.js"><link rel="prefetch" href="/assets/js/14.5d38269c.js"><link rel="prefetch" href="/assets/js/16.6fd87597.js"><link rel="prefetch" href="/assets/js/17.73103f0d.js"><link rel="prefetch" href="/assets/js/18.f9ff32ba.js"><link rel="prefetch" href="/assets/js/19.ff7555f9.js"><link rel="prefetch" href="/assets/js/20.c024071c.js"><link rel="prefetch" href="/assets/js/21.69276230.js"><link rel="prefetch" href="/assets/js/22.a63fa133.js"><link rel="prefetch" href="/assets/js/23.a27bab8f.js"><link rel="prefetch" href="/assets/js/24.29d5de4f.js"><link rel="prefetch" href="/assets/js/25.28d412a3.js"><link rel="prefetch" href="/assets/js/26.ff74cf23.js"><link rel="prefetch" href="/assets/js/27.1fe43e31.js"><link rel="prefetch" href="/assets/js/28.8780ba33.js"><link rel="prefetch" href="/assets/js/29.b3a5f4cc.js"><link rel="prefetch" href="/assets/js/3.31453e0e.js"><link rel="prefetch" href="/assets/js/30.a0c2163b.js"><link rel="prefetch" href="/assets/js/31.1bd4258a.js"><link rel="prefetch" href="/assets/js/4.e48b681e.js"><link rel="prefetch" href="/assets/js/5.b57ddede.js"><link rel="prefetch" href="/assets/js/6.e56f0864.js"><link rel="prefetch" href="/assets/js/7.dadd32d1.js"><link rel="prefetch" href="/assets/js/8.c9941838.js"><link rel="prefetch" href="/assets/js/9.5301f2c1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7b36eabc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="center-both-ways-with-css-grid"><a href="#center-both-ways-with-css-grid" class="header-anchor">#</a> Center Both Ways with Css Grid</h1> <p>Consider the following html:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center-all-the-things<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span>💩<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>We want to center our button. Assuming we are using css grid, we only need a one liner to center our s#itty button.</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">#center-all-the-things</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">place-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> 🥳
+<span class="token punctuation">}</span>
+</code></pre></div><section><style>
+        #center-all-the-things {
+            display: grid;
+            place-content: center;
+            width: 100%;
+            height: 500px;
+            resize: both;
+            background: pink;
+            overflow: scroll;
+        }
+        button {
+          border: none;
+          font-size: 4rem;
+          background: transparent; 
+        }
+    </style> <span id="center-all-the-things"><button>💩</button></span></section> <p>One line to center, but there is some more going on in the embedded example, so for completeness:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">#center-all-the-things</span> <span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+        <span class="token property">place-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+        <span class="token property">resize</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+        <span class="token property">overflow</span><span class="token punctuation">:</span> scroll<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">button</span> <span class="token punctuation">{</span>
+      <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> 4rem<span class="token punctuation">;</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center-all-the-things<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span>💩<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.84839d0e.js" defer></script><script src="/assets/js/2.8f2a2afa.js" defer></script><script src="/assets/js/15.94152cee.js" defer></script>
+  </body>
+</html>

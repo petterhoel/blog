@@ -3,7 +3,6 @@
 [bitsnpixles.dev](https://bitsnpixels.dev)  
 This is a place for reminders and thoughts on whatever I come across as a developer that I find reassuring to have a permalink for.
 
-(i am no longer using the .io domain extention on account of the [colonialism issue](https://gigaom.com/2014/06/30/the-dark-side-of-io-how-the-u-k-is-making-web-domain-profits-from-a-shady-cold-war-land-deal/))
 
 ## Getting Started
 
@@ -11,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need [yarn](https://yarnpkg.com/) or [npm](https://nodejs.org/) on your machine, an evergreen browser and preferably your favorite text edtior 🤓 
+You need [npm](https://nodejs.org/) on your machine, an evergreen browser and preferably your favorite text edtior 🤓 
 
 ### Installing
 
@@ -26,13 +25,13 @@ Change directory
 
 Install dependencies
 ```
-> yarn
+> npm install
 ```
 
 Spin up the dev server
 
 ```
-> yarn docs:dev 
+> npm run docs:dev 
 ```
 navigate to [localhost:8080](http://localhost:8080)
 
@@ -42,23 +41,23 @@ navigate to [localhost:8080](http://localhost:8080)
 thank you for playing! but our tests are in another castle
 ```
 
-## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/fcee5757-7d0e-43e6-b441-28bd554805ba/deploy-status)](https://app.netlify.com/sites/bitsnpixels/deploys)
+## Deployment
 A merge to master will deploy _this_ site. 
 
 If you are using this as a starter for your own project you wanna run 
 
 ```
-> yarn docs:build
+> npx vuepress build
 ``` 
 
-That will create all the static files for your site and place them in ```docs/.vuepress/dist```. Copy these files to your sites root folder. 
+That will create all the static files for your site and place them in ```.vuepress/dist```. Copy these files to your sites root folder. 
 
-This projects uses [netlify](https://www.netlify.com/) for that. They make it real simple. 
+This projects uses [Cloudflare](https://www.cloudflare.com) for that. 
 
 ## Built With
 
 * [VuePress](https://vuepress.vuejs.org/) - VuePress
-* [Netlify](https://www.netlify.com/) - Netlify
+* [Cloudflare](https://www.cloudflare.com) - Cloudflare
 
 ## Contributing
 
