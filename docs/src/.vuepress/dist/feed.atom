@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bitsnpixels.dev</id>
+    <title>Bits &amp;&amp; Pixels</title>
+    <updated>2023-12-02T09:01:17.595Z</updated>
+    <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+    <link rel="alternate" href="https://bitsnpixels.dev"/>
+    <link rel="self" href="https://bitsnpixels.dev/feed.atom"/>
+    <subtitle>Tiny snippet reminders for a developer.</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Getting meta with your table using sp_help]]></title>
+        <id>https://bitsnpixels.dev/blog/getting-meta-with-your-table-using-sp_help.html</id>
+        <link href="https://bitsnpixels.dev/blog/getting-meta-with-your-table-using-sp_help.html">
+        </link>
+        <updated>2019-11-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Columns, keys (incoming too), indexes and more...]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[All stories in a nx workspace]]></title>
+        <id>https://bitsnpixels.dev/blog/all-stories-in-a-nx-workspace.html</id>
+        <link href="https://bitsnpixels.dev/blog/all-stories-in-a-nx-workspace.html">
+        </link>
+        <updated>2022-06-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to set up a storybook containing all stories in a nx repo.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Center Both Ways with Css Grid]]></title>
+        <id>https://bitsnpixels.dev/blog/center-both-ways-with-css-grid.html</id>
+        <link href="https://bitsnpixels.dev/blog/center-both-ways-with-css-grid.html">
+        </link>
+        <updated>2021-09-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Use a css one liner to center child horizontally and vertically with css grid.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Changing your git remote]]></title>
+        <id>https://bitsnpixels.dev/blog/change-your-origin.html</id>
+        <link href="https://bitsnpixels.dev/blog/change-your-origin.html">
+        </link>
+        <updated>2022-02-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Changing your git remote]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to keep your Angular project up to date]]></title>
+        <id>https://bitsnpixels.dev/blog/how-to-keep-your-angular-project-up-to-date.html</id>
+        <link href="https://bitsnpixels.dev/blog/how-to-keep-your-angular-project-up-to-date.html">
+        </link>
+        <updated>2019-09-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Command to bump your angular project to the latest version.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Import Your Angular Scss Files in Storybook]]></title>
+        <id>https://bitsnpixels.dev/blog/import-your-angular-scss-files-in-storybook.html</id>
+        <link href="https://bitsnpixels.dev/blog/import-your-angular-scss-files-in-storybook.html">
+        </link>
+        <updated>2021-08-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to deal with styles from global/external *.scss files when working with storybook]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Handy key filtering in Angular templates]]></title>
+        <id>https://bitsnpixels.dev/blog/handy-key-filtering-in-angular.html</id>
+        <link href="https://bitsnpixels.dev/blog/handy-key-filtering-in-angular.html">
+        </link>
+        <updated>2019-04-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Key event filtering in angular templates]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Npm version annotation]]></title>
+        <id>https://bitsnpixels.dev/blog/npm-version-annotation.html</id>
+        <link href="https://bitsnpixels.dev/blog/npm-version-annotation.html">
+        </link>
+        <updated>2022-06-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Tilde and caret, what does it mean for you dependencies]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript cheatsheet 🤩]]></title>
+        <id>https://bitsnpixels.dev/blog/javascript-cheatsheat.html</id>
+        <link href="https://bitsnpixels.dev/blog/javascript-cheatsheat.html">
+        </link>
+        <updated>2020-01-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Cheat sheet for some JavaScript tricks]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Angular in Vue]]></title>
+        <id>https://bitsnpixels.dev/blog/angular-in-vue.html</id>
+        <link href="https://bitsnpixels.dev/blog/angular-in-vue.html">
+        </link>
+        <updated>2019-02-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Embedding stackblitz running an angular app in VuePress]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Nx version links (github)]]></title>
+        <id>https://bitsnpixels.dev/blog/nx-version-links.html</id>
+        <link href="https://bitsnpixels.dev/blog/nx-version-links.html">
+        </link>
+        <updated>2022-06-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Keep track of what packages nx is supposed to be using.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Run SQL Server on a M1 Mac]]></title>
+        <id>https://bitsnpixels.dev/blog/run-sql-server-on-m1-mac.html</id>
+        <link href="https://bitsnpixels.dev/blog/run-sql-server-on-m1-mac.html">
+        </link>
+        <updated>2022-06-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to set up a docker instance of SQL Server on a M1 Mac.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Localdb connection strings]]></title>
+        <id>https://bitsnpixels.dev/blog/sql-localdb-connectionstring.html</id>
+        <link href="https://bitsnpixels.dev/blog/sql-localdb-connectionstring.html">
+        </link>
+        <updated>2019-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Use localdb in SQL server connection strings for a hassle free dev setup.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Storybooking Custom Control Value Accessor Form Controls]]></title>
+        <id>https://bitsnpixels.dev/blog/storybooking-custom-control-value-accessor-form-controls.html</id>
+        <link href="https://bitsnpixels.dev/blog/storybooking-custom-control-value-accessor-form-controls.html">
+        </link>
+        <updated>2021-08-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Use Storybook.js with Angular Components that implements ControlValueAccessor]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Read and register .Net configuration]]></title>
+        <id>https://bitsnpixels.dev/blog/read-and-register-dotnet-configuration.html</id>
+        <link href="https://bitsnpixels.dev/blog/read-and-register-dotnet-configuration.html">
+        </link>
+        <updated>2021-09-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to read and register configuration on app startup in .Net and use it with Dependency Injection later on 😻]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tiny dotnet web api]]></title>
+        <id>https://bitsnpixels.dev/blog/tiny-dotnet-wab-api.html</id>
+        <link href="https://bitsnpixels.dev/blog/tiny-dotnet-wab-api.html">
+        </link>
+        <updated>2020-11-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to make the smallest possible web api with .Net 5 and top level statements in c# 9.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Terminal goodies: Awesome 🤩, but forgettable 🕸]]></title>
+        <id>https://bitsnpixels.dev/blog/terminal-goodies.html</id>
+        <link href="https://bitsnpixels.dev/blog/terminal-goodies.html">
+        </link>
+        <updated>2019-09-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Files and commands that makes life better]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Scanner or person? Part 1]]></title>
+        <id>https://bitsnpixels.dev/blog/scanner-or-person-part-1.html</id>
+        <link href="https://bitsnpixels.dev/blog/scanner-or-person-part-1.html">
+        </link>
+        <updated>2020-01-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How we differentiated scanner input from a person typing.]]></summary>
+    </entry>
+</feed>

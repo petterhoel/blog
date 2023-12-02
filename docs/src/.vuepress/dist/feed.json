@@ -1,0 +1,136 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Bits && Pixels",
+    "home_page_url": "https://bitsnpixels.dev",
+    "feed_url": "https://bitsnpixels.dev/feed.json",
+    "description": "Tiny snippet reminders for a developer.",
+    "items": [
+        {
+            "id": "https://bitsnpixels.dev/blog/getting-meta-with-your-table-using-sp_help.html",
+            "url": "https://bitsnpixels.dev/blog/getting-meta-with-your-table-using-sp_help.html",
+            "title": "Getting meta with your table using sp_help",
+            "summary": "Columns, keys (incoming too), indexes and more...",
+            "date_modified": "2019-11-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/all-stories-in-a-nx-workspace.html",
+            "url": "https://bitsnpixels.dev/blog/all-stories-in-a-nx-workspace.html",
+            "title": "All stories in a nx workspace",
+            "summary": "How to set up a storybook containing all stories in a nx repo.",
+            "date_modified": "2022-06-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/center-both-ways-with-css-grid.html",
+            "url": "https://bitsnpixels.dev/blog/center-both-ways-with-css-grid.html",
+            "title": "Center Both Ways with Css Grid",
+            "summary": "Use a css one liner to center child horizontally and vertically with css grid.",
+            "date_modified": "2021-09-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/change-your-origin.html",
+            "url": "https://bitsnpixels.dev/blog/change-your-origin.html",
+            "title": "Changing your git remote",
+            "summary": "Changing your git remote",
+            "date_modified": "2022-02-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/how-to-keep-your-angular-project-up-to-date.html",
+            "url": "https://bitsnpixels.dev/blog/how-to-keep-your-angular-project-up-to-date.html",
+            "title": "How to keep your Angular project up to date",
+            "summary": "Command to bump your angular project to the latest version.",
+            "date_modified": "2019-09-23T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/import-your-angular-scss-files-in-storybook.html",
+            "url": "https://bitsnpixels.dev/blog/import-your-angular-scss-files-in-storybook.html",
+            "title": "Import Your Angular Scss Files in Storybook",
+            "summary": "How to deal with styles from global/external *.scss files when working with storybook",
+            "date_modified": "2021-08-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/handy-key-filtering-in-angular.html",
+            "url": "https://bitsnpixels.dev/blog/handy-key-filtering-in-angular.html",
+            "title": "Handy key filtering in Angular templates",
+            "summary": "Key event filtering in angular templates",
+            "date_modified": "2019-04-15T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/npm-version-annotation.html",
+            "url": "https://bitsnpixels.dev/blog/npm-version-annotation.html",
+            "title": "Npm version annotation",
+            "summary": "Tilde and caret, what does it mean for you dependencies",
+            "date_modified": "2022-06-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/javascript-cheatsheat.html",
+            "url": "https://bitsnpixels.dev/blog/javascript-cheatsheat.html",
+            "title": "JavaScript cheatsheet 🤩",
+            "summary": "Cheat sheet for some JavaScript tricks",
+            "date_modified": "2020-01-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/angular-in-vue.html",
+            "url": "https://bitsnpixels.dev/blog/angular-in-vue.html",
+            "title": "Angular in Vue",
+            "summary": "Embedding stackblitz running an angular app in VuePress",
+            "date_modified": "2019-02-16T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/nx-version-links.html",
+            "url": "https://bitsnpixels.dev/blog/nx-version-links.html",
+            "title": "Nx version links (github)",
+            "summary": "Keep track of what packages nx is supposed to be using.",
+            "date_modified": "2022-06-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/run-sql-server-on-m1-mac.html",
+            "url": "https://bitsnpixels.dev/blog/run-sql-server-on-m1-mac.html",
+            "title": "Run SQL Server on a M1 Mac",
+            "summary": "How to set up a docker instance of SQL Server on a M1 Mac.",
+            "date_modified": "2022-06-06T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/sql-localdb-connectionstring.html",
+            "url": "https://bitsnpixels.dev/blog/sql-localdb-connectionstring.html",
+            "title": "Localdb connection strings",
+            "summary": "Use localdb in SQL server connection strings for a hassle free dev setup.",
+            "date_modified": "2019-02-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/storybooking-custom-control-value-accessor-form-controls.html",
+            "url": "https://bitsnpixels.dev/blog/storybooking-custom-control-value-accessor-form-controls.html",
+            "title": "Storybooking Custom Control Value Accessor Form Controls",
+            "summary": "Use Storybook.js with Angular Components that implements ControlValueAccessor",
+            "date_modified": "2021-08-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/read-and-register-dotnet-configuration.html",
+            "url": "https://bitsnpixels.dev/blog/read-and-register-dotnet-configuration.html",
+            "title": "Read and register .Net configuration",
+            "summary": "How to read and register configuration on app startup in .Net and use it with Dependency Injection later on 😻",
+            "date_modified": "2021-09-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/tiny-dotnet-wab-api.html",
+            "url": "https://bitsnpixels.dev/blog/tiny-dotnet-wab-api.html",
+            "title": "Tiny dotnet web api",
+            "summary": "How to make the smallest possible web api with .Net 5 and top level statements in c# 9.",
+            "date_modified": "2020-11-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/terminal-goodies.html",
+            "url": "https://bitsnpixels.dev/blog/terminal-goodies.html",
+            "title": "Terminal goodies: Awesome 🤩, but forgettable 🕸",
+            "summary": "Files and commands that makes life better",
+            "date_modified": "2019-09-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://bitsnpixels.dev/blog/scanner-or-person-part-1.html",
+            "url": "https://bitsnpixels.dev/blog/scanner-or-person-part-1.html",
+            "title": "Scanner or person? Part 1",
+            "summary": "How we differentiated scanner input from a person typing.",
+            "image": "https://bitsnpixels.dev/https://upload.wikimedia.org/wikipedia/commons/0/0b/Code_3_of_9.svg#small \"Example bar code\"",
+            "date_modified": "2020-01-27T00:00:00.000Z"
+        }
+    ]
+}

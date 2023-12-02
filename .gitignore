@@ -1,6 +1,6 @@
 node_modules/
 
-.vuepress/dist
+docs/.vuepress/dist
 
 **.xml
 *.iml
