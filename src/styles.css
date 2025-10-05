@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Montserrat-VariableFont_wght.ttf') format('truetype'),
+    url('/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'),
+    url('/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('/EBGaramond-VariableFont_wght.ttf') format('truetype'),
+    url('/EBGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype'),
+    url('/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrains';
+    src: url('/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JetBrains';
+    src: url('/JetBrainsMono-Italic.woff2') format('woff2'),
+    url('/JetBrainsMono-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+:root {
+    --text-serif-font-name: 'EBGaramond';
+    --text-sans-font-name: 'Montserrat';
+    --text-mono-font-name: 'JetBrains';
+    font-size: 24px;
+    color-scheme: light dark;
+}
+
+html {
+    font-family: var(--text-serif-font-name), serif;
+    color: light-dark(#3c263a, #f3e1e9);
+    background: light-dark(#ded2d2, #232021);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--text-sans-font-name), sans-serif;
+    letter-spacing: 0.034em;
+    font-weight: 750;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5, h6 {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.sans {
+    font-family: var(--text-sans-font-name), sans-serif;
+}
+.mono {
+    font-family: var(--text-mono-font-name), monospace;
+}
+.serif {
+    font-family: var(--text-serif-font-name), serif;
+}
+
+ul[class] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+pre {
+    padding: 1rem;
+    font-size: 18px;
+    border-radius: 10px;
+    & code {
+        font-family: var(--text-mono-font-name), monospace;
+    }
+}
+
+@media (min-width: 600px) {
+    .about-image {
+        float: right;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}
+.about-image {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
+    filter: grayscale(100%);
+}
+
+@media (prefers-color-scheme: dark) {
+    img[alt="Example bar code encoding the text WIKIPEDIA"] {
+        filter: invert(100);
+    }
+}
