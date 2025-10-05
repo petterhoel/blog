@@ -1,0 +1,12 @@
+---
+import * as about from '../../content/about.md';
+import Layout from "../../Layout.astro";
+const content = await about.compiledContent()
+---
+<Layout title="What is this" description="About this site">
+    <article set:html={content}></article>
+</Layout>
+
+<style>
+
+</style>
