@@ -15,8 +15,8 @@ A client wanted to use a barcode scanner with a web app we were making. Normal u
 #### Other requirements
 
 - Scanner is to be used as a keyboard wedge without modification or custom setup. This is to ease any work outside of development related to operations: setup, maintenance, cross-application use etc.
-- ![Example bar code encoding the text *WIKIPEDIA*](https://upload.wikimedia.org/wikipedia/commons/0/0b/Code_3_of_9.svg#small "Example bar code")We are scanning [Code 39 bar codes](https://en.wikipedia.org/wiki/Code_39) like this one from Wikipedia. In other words your everyday bar codes.
-
+- We are scanning [Code 39 bar codes](https://en.wikipedia.org/wiki/Code_39) like this one from Wikipedia. In other words your everyday bar codes.
+![Example bar code encoding the text *WIKIPEDIA*](https://upload.wikimedia.org/wikipedia/commons/0/0b/Code_3_of_9.svg#small "Example bar code")
 
 ## #1 Can we programmatically separate events by device?
 

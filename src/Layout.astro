@@ -19,12 +19,12 @@ const { title, description } = Astro.props;
   <nav class="mono">
       <a href="/" class="title">
           <img src="/icon.svg" height="36" alt="Bits&&Pixels logo">
-          <span class="title mono">bits && pixels</span>
+          <span class="title sans">bits && pixels</span>
       </a>
 
       <ul class="nav-links serif">
           <li><a href="/blog">Blog</a></li>
-          <li><a href="/about">What's this?</a></li>
+          <li><a href="/about">About</a></li>
           <li><a href="https://github.com/petterhoel/blog" target="_blank">GitHub</a></li>
       </ul>
   </nav>
@@ -52,17 +52,19 @@ const { title, description } = Astro.props;
         a {
             text-decoration: none;
             color: inherit;
-
         }
 
         a.title {
             display: flex;
             align-items: end;
             gap: 16px;
+            & img {
+                align-self: start;
+            }
 
             & .title {
-                font-weight: 500;
-                font-size: 25px;
+                font-weight: 700;
+                font-size: 30px;
                 letter-spacing: 0.054em;
             }
         }
@@ -70,6 +72,7 @@ const { title, description } = Astro.props;
         & .nav-links {
             margin: 0;
             padding: 0;
+            padding-bottom: 1px; /*optical alignment*/
             display: flex;
             flex-wrap: nowrap;
             gap: 1rem;
@@ -88,7 +91,6 @@ const { title, description } = Astro.props;
         padding: 16px;
         max-width: 100vw;
         margin: 0 auto;
-        box-sizing: border-box;
     }
     footer {
         border-top: 1px solid light-dark(#3c263a, #ffecec);
@@ -96,7 +98,6 @@ const { title, description } = Astro.props;
         max-width: 100vw;
         margin: 0 auto;
         padding: 26px 16px;
-        box-sizing: border-box;
 
         & h2 {
             padding: 0;
