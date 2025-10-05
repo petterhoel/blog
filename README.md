@@ -47,10 +47,6 @@ A merge to main will deploy _this_ site.
 * [Astro](https://astro.build)
 * [Cloudflare](https://www.cloudflare.com)
 
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
 
 ## Authors
 
