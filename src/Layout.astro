@@ -1,45 +1,92 @@
 ---
-import './styles.css'
+import "./styles.css";
 interface Props {
-  title: string;
-  description: string;
+    title: string;
+    description: string;
 }
 const { title, description } = Astro.props;
 ---
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description}/>
-    <title>{title} | Bits&&Pixels</title>
-</head>
-<body>
-  <nav class="mono">
-      <a href="/" class="title">
-          <img src="/icon.svg" height="36" alt="Bits&&Pixels logo">
-          <span class="title sans">bits && pixels</span>
-      </a>
 
-      <ul class="nav-links serif">
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="https://github.com/petterhoel/blog" target="_blank">GitHub</a></li>
-      </ul>
-  </nav>
-  <main>
-      <slot/>
-  </main>
-  <footer>
-      <h2>External goodies 🥰</h2>
-      <ul class="lenker sans">
-          <li><a href="https://austingil.com/how-to-build-html-forms-right-semantics" target="_blank" rel="noopener noreferrer">Build Html Forms Right</a> By Austin Gil</li>
-          <li><a href="https://bhagesh.tech/trick-to-write-css-and-html-100x-faster" target="_blank" rel="noopener noreferrer">Emmet cheatcheet</a> By Bhagesh Hunakunti</li>
-          <li><a href="https://modern-web.dev" target="_blank" rel="noopener noreferrer" class="repo-link">Modern web</a> By modernweb-dev</li>
-      </ul>
-  </footer>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <title>{title} | Bits&&Pixels</title>
+    </head>
+    <body>
+        <nav class="mono">
+            <a href="/" class="title">
+                <img src="/icon.svg" height="36" alt="Bits&&Pixels logo" />
+                <span class="title sans">bits && pixels</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li style="padding-top: 2px;">
+                    <a
+                        href="https://github.com/petterhoel/blog"
+                        target="_blank"
+                        aria-label="Go to GitHub repository"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            color="currentColor"
+                            fill="none"
+                            aria-hidden="true"
+                            ><title class="sr-only">GitHub Icon</title><path
+                                d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path><path
+                                d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path></svg
+                        >
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <slot />
+        </main>
+        <footer>
+            <h2>External goodies 🥰</h2>
+            <ul class="lenker">
+                <li>
+                    <a
+                        href="https://austingil.com/how-to-build-html-forms-right-semantics"
+                        target="_blank"
+                        rel="noopener noreferrer">Build Html Forms Right</a
+                    > By Austin Gil
+                </li>
+                <li>
+                    <a
+                        href="https://bhagesh.tech/trick-to-write-css-and-html-100x-faster"
+                        target="_blank"
+                        rel="noopener noreferrer">Emmet cheatcheet</a
+                    > By Bhagesh Hunakunti
+                </li>
+                <li>
+                    <a
+                        href="https://modern-web.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="repo-link">Modern web</a
+                    > By modernweb-dev
+                </li>
+            </ul>
+        </footer>
+    </body>
 </html>
 
 <style>
@@ -83,6 +130,7 @@ const { title, description } = Astro.props;
             }
             & a:hover {
                 text-decoration: underline;
+                color: var(--cat-pink);
             }
         }
     }
@@ -93,7 +141,7 @@ const { title, description } = Astro.props;
         margin: 0 auto;
     }
     footer {
-        border-top: 1px solid light-dark(#3c263a, #ffecec);
+        border-top: 1px solid var(--cat-pink);
         width: 900px;
         max-width: 100vw;
         margin: 0 auto;

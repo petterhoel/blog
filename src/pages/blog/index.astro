@@ -32,10 +32,10 @@ posts = posts
         {
             posts.map((post) => (
                 <li>
-                    <a class="sans" href={`/blog/${post.slug}`}>
+                    <a href={`/blog/${post.slug}`}>
                         <h2> {post.data.title || post.id}</h2>
 
-                        <p class="serif"> {post.data.description}</p>
+                        <p> {post.data.description}</p>
                         <time datetime={post.data.published}>
                             Published: {post.data.publishedDisplay}
                         </time>
@@ -61,11 +61,11 @@ posts = posts
                 margin-top: 1rem;
             }
             & p {
-                font-size: 18px;
+                font-size: 16px;
                 margin: 0;
             }
             & time {
-                font-size: 15px;
+                font-size: 16px;
             }
         }
     }

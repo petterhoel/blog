@@ -1,64 +1,87 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/Montserrat-VariableFont_wght.ttf') format('truetype'),
-    url('/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-family: "Montserrat";
+    src:
+        url("/Montserrat-VariableFont_wght.ttf") format("truetype"),
+        url("/Montserrat-VariableFont_wght.ttf") format("truetype");
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'),
-    url('/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-family: "Montserrat";
+    src:
+        url("/Montserrat-Italic-VariableFont_wght.ttf") format("truetype"),
+        url("/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'EBGaramond';
-    src: url('/EBGaramond-VariableFont_wght.ttf') format('truetype'),
-    url('/EBGaramond-VariableFont_wght.ttf') format('truetype');
+    font-family: "EBGaramond";
+    src:
+        url("/EBGaramond-VariableFont_wght.ttf") format("truetype"),
+        url("/EBGaramond-VariableFont_wght.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'EBGaramond';
-    src: url('/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype'),
-    url('/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+    font-family: "EBGaramond";
+    src:
+        url("/EBGaramond-Italic-VariableFont_wght.ttf") format("truetype"),
+        url("/EBGaramond-Italic-VariableFont_wght.ttf") format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'JetBrains';
-    src: url('/JetBrainsMono-Regular.woff2') format('woff2'),
-    url('/JetBrainsMono-Regular.woff2') format('woff2');
+    font-family: "JetBrains";
+    src:
+        url("/JetBrainsMono-Regular.woff2") format("woff2"),
+        url("/JetBrainsMono-Regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'JetBrains';
-    src: url('/JetBrainsMono-Italic.woff2') format('woff2'),
-    url('/JetBrainsMono-Italic.woff2') format('woff2');
+    font-family: "JetBrains";
+    src:
+        url("/JetBrainsMono-Italic.woff2") format("woff2"),
+        url("/JetBrainsMono-Italic.woff2") format("woff2");
     font-weight: normal;
     font-style: italic;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
 }
 
 :root {
-    --text-serif-font-name: 'EBGaramond';
-    --text-sans-font-name: 'Montserrat';
-    --text-mono-font-name: 'JetBrains';
-    font-size: 24px;
+    --text-serif-font-name: "EBGaramond";
+    --text-sans-font-name: "Montserrat";
+    --text-mono-font-name: "JetBrains";
+    --cat-background:
+        light-dark(white, black), --pink: light-dark(#f5c2e7, #ea76cb);
+    --cat-text: light-dark(#4c4f69, #cdd6f4);
+    --cat-pink: light-dark(#ea76cb, #f5c2e7);
+    --cat-lavender: light-dark(#7287fd, #b4befe);
+    font-size: 18px;
     color-scheme: light dark;
 }
 
-html, html * {
+html,
+html * {
     box-sizing: border-box;
 }
 
 html {
-    font-family: var(--text-serif-font-name), serif;
-    color: light-dark(#3c263a, #f3e1e9);
-    background: light-dark(#ded2d2, #232021);
+    font-family: var(--text-sans-font-name), serif;
+    color: var(--cat-text);
+    background: var(--cat-background);
 }
 
 body {
@@ -70,7 +93,12 @@ main img {
     max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--text-sans-font-name), sans-serif;
     letter-spacing: 0.034em;
     font-weight: 750;
@@ -82,8 +110,13 @@ h1 {
     font-size: 40px;
 }
 
+article h1 {
+    font-size: 34px;
+}
+
 h2 {
     font-size: 32px;
+    color: var(--cat-lavender);
 }
 
 h3 {
@@ -94,7 +127,8 @@ h4 {
     font-size: 20px;
 }
 
-h5, h6 {
+h5,
+h6 {
     font-size: 20px;
     font-style: italic;
 }
@@ -105,24 +139,13 @@ h5, h6 {
 .mono {
     font-family: var(--text-mono-font-name), monospace;
 }
-.serif {
-    font-family: var(--text-serif-font-name), serif;
+
+a {
+    color: var(--text);
 }
 
-a[target="_blank"]::after {
-    /* &nearr;, but nicer. SVG adapted from Inter's rendition of "↗". */
-    content: url("data:image/svg+xml,%3Csvg viewBox='0 0 7 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.04261 6.80966L0.377841 6.14489L5.32102 1.19318H1.50284L1.51136 0.272727H6.90625V5.67614H5.97727L5.9858 1.85795L1.04261 6.80966Z' fill='black'/%3E%3C/svg%3E%0A");
-    /* inline => inline-block, so that we can give it a height */
-    display: inline-block;
-    height: 0.5em;
-    padding-inline: 0.2em;
-    aspect-ratio: 1;
-    line-height: 1;
-    vertical-align: text-top;
-
-    @media (prefers-color-scheme: dark) {
-        filter: invert(100%);
-    }
+a:hover {
+    color: var(--cat-pink);
 }
 
 ul {
@@ -136,28 +159,31 @@ ul[class] {
     margin: 0;
 }
 
-pre, code {
+pre,
+code {
     background-color: #24292e;
 }
 
 pre {
     padding: 1rem;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 10px;
     & code {
         font-family: var(--text-mono-font-name), monospace;
     }
 }
 
-code:not(:has(> .github-dark)){
+code:not(:has(> .github-dark)) {
     padding: 0.1em 0.3em;
     border-radius: 0.3em;
-    color: #b392f0;
+    color: var(--cat-lavender);
+    font-size: 16px;
     border: 1px solid rgba(179, 146, 240, 0.42);
 }
 
 pre.github-dark {
-    &, code {
+    &,
+    code {
         border: none;
     }
 }
@@ -166,7 +192,6 @@ code {
     font-family: var(--text-mono-font-name), monospace;
     font-size: 20px;
 }
-
 
 @media (min-width: 600px) {
     .about-image {
