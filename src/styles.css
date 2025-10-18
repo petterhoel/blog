@@ -104,10 +104,12 @@ h6 {
     font-weight: 750;
     margin-top: 2em;
     margin-bottom: 0;
+    color: light-dark(#df8e1d, #f9e2af);
 }
 
 h1 {
     font-size: 40px;
+    color: light-dark(#df8e1d, #f9e2af);
 }
 
 article h1 {
@@ -115,7 +117,7 @@ article h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 28px;
     color: var(--cat-lavender);
 }
 
