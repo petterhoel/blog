@@ -15,24 +15,6 @@
 }
 
 @font-face {
-    font-family: "EBGaramond";
-    src:
-        url("/EBGaramond-VariableFont_wght.ttf") format("truetype"),
-        url("/EBGaramond-VariableFont_wght.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "EBGaramond";
-    src:
-        url("/EBGaramond-Italic-VariableFont_wght.ttf") format("truetype"),
-        url("/EBGaramond-Italic-VariableFont_wght.ttf") format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
     font-family: "JetBrains";
     src:
         url("/JetBrainsMono-Regular.woff2") format("woff2"),
@@ -61,14 +43,13 @@
 }
 
 :root {
-    --text-serif-font-name: "EBGaramond";
     --text-sans-font-name: "Montserrat";
     --text-mono-font-name: "JetBrains";
-    --cat-background:
-        light-dark(white, black), --pink: light-dark(#f5c2e7, #ea76cb);
+    --cat-background: light-dark(#eff1f5, #181825);
     --cat-text: light-dark(#4c4f69, #cdd6f4);
     --cat-pink: light-dark(#ea76cb, #f5c2e7);
     --cat-lavender: light-dark(#7287fd, #b4befe);
+    --cat-yellow: light-dark(#df8e1d, #f9e2af);
     font-size: 18px;
     color-scheme: light dark;
 }
@@ -79,7 +60,7 @@ html * {
 }
 
 html {
-    font-family: var(--text-sans-font-name), serif;
+    font-family: var(--text-sans-font-name), sans-serif;
     color: var(--cat-text);
     background: var(--cat-background);
 }
@@ -99,17 +80,15 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--text-sans-font-name), sans-serif;
     letter-spacing: 0.034em;
     font-weight: 750;
     margin-top: 2em;
     margin-bottom: 0;
-    color: light-dark(#df8e1d, #f9e2af);
 }
 
 h1 {
     font-size: 40px;
-    color: light-dark(#df8e1d, #f9e2af);
+    color: var(--cat-yellow);
 }
 
 article h1 {
@@ -118,7 +97,6 @@ article h1 {
 
 h2 {
     font-size: 28px;
-    color: var(--cat-lavender);
 }
 
 h3 {
@@ -135,9 +113,6 @@ h6 {
     font-style: italic;
 }
 
-.sans {
-    font-family: var(--text-sans-font-name), sans-serif;
-}
 .mono {
     font-family: var(--text-mono-font-name), monospace;
 }
@@ -180,7 +155,10 @@ code:not(:has(> .github-dark)) {
     border-radius: 0.3em;
     color: var(--cat-lavender);
     font-size: 16px;
-    border: 1px solid rgba(179, 146, 240, 0.42);
+}
+
+article p > code {
+    background-color: light-dark(#dce0e8, #24292e);
 }
 
 pre.github-dark {

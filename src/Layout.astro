@@ -18,9 +18,9 @@ const { title, description } = Astro.props;
     </head>
     <body>
         <nav class="mono">
-            <a href="/" class="title">
+            <a href="/" class="title-link">
                 <img src="/icon.svg" height="36" alt="Bits&&Pixels logo" />
-                <span class="title sans">bits && pixels</span>
+                <span class="title mono">bits && pixels</span>
             </a>
 
             <ul class="nav-links">
@@ -101,13 +101,21 @@ const { title, description } = Astro.props;
             color: inherit;
         }
 
-        a.title {
+        a.title-link {
             color: var(--cat-lavender);
             display: flex;
             align-items: end;
             gap: 16px;
             & img {
                 align-self: start;
+            }
+
+            @media (width <= 500px) {
+                .title {
+                    visibility: hidden;
+                    width: 0;
+                    height: 0;
+                }
             }
 
             & .title {
@@ -120,7 +128,7 @@ const { title, description } = Astro.props;
         & .nav-links {
             margin: 0;
             padding: 0;
-            padding-bottom: 1px; /*optical alignment*/
+            padding-bottom: 2px; /*optical alignment*/
             display: flex;
             flex-wrap: nowrap;
             gap: 1rem;
