@@ -1,6 +1,6 @@
 ---
 title: "JavaScript cheatsheet 🤩"
-date: 2020-01-12
+published: 2020-01-12
 description: Cheat sheet for some JavaScript tricks
 author: Petter
 ---

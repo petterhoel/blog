@@ -1,6 +1,6 @@
 ---
 title: Handy key filtering in Angular templates
-date: 2019-04-15
+published: 2019-04-15
 description: Key event filtering in angular templates
 author: Petter
 ---

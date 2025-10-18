@@ -1,6 +1,6 @@
 ---
 title: Getting meta with your table using sp_help
-date: 2019-11-01
+published: 2019-11-01
 description: Columns, keys (incoming too), indexes and more...
 author: Petter
 ---

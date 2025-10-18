@@ -1,6 +1,6 @@
 ---
 title: Changing your git remote
-date: 2022-02-14
+published: 2022-02-14
 description: Changing your git remote
 author: Petter
 ---

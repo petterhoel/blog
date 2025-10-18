@@ -1,6 +1,6 @@
 ---
 title: Delete Microsoft AutoUpdate in macOS
-date: 2025-09-3
+published: 2025-09-03
 description: How to nuke that annoying bastardo 🧌
 author: Petter
 ---

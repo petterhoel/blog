@@ -1,7 +1,7 @@
 ---
 title: All stories in a nx workspace
-date: 2022-06-01
-description: How to set up a storybook containing all stories in a nx repo. 
+published: 2022-06-01
+description: How to set up a storybook containing all stories in a nx repo.
 author: Petter
 ---
 # All stories in a nx workspace

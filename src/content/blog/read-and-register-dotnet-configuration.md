@@ -1,18 +1,18 @@
 ---
 title: "Read and register .Net configuration"
-date: 2021-09-04
+published: 2021-09-04
 description: How to read and register configuration on app startup in .Net and use it with Dependency Injection later on 😻
 author: Petter
 ---
 # How ro read and register configuration on app startup in .Net
 
-This is a task that I seldom do. It is usually only done at the start of a project or when adding subtansial features. And I always have to look it up. 
+This is a task that I seldom do. It is usually only done at the start of a project or when adding subtansial features. And I always have to look it up.
 
-In the standard webapp-template for .Net, the configuration class is injected into the `Startup.cs` file. However, some projects live quite well without `Startup.cs`. Think worker services or the new slim and hip new style of top level `Program.cs`. We will see how to get a hold of configuration, read the content into classes and register them with the Dependency Injection Engine in .Net. We will also see it in use. 
+In the standard webapp-template for .Net, the configuration class is injected into the `Startup.cs` file. However, some projects live quite well without `Startup.cs`. Think worker services or the new slim and hip new style of top level `Program.cs`. We will see how to get a hold of configuration, read the content into classes and register them with the Dependency Injection Engine in .Net. We will also see it in use.
 
-Our example is a very useful 🐱-based background service. 
+Our example is a very useful 🐱-based background service.
 
-Consider the following configuration, rather crutial info we need to run our application. 
+Consider the following configuration, rather crutial info we need to run our application.
 ```json
 // appsettings.json
 {
@@ -59,7 +59,7 @@ await Host
     .RunAsync();
 ```
 
-And now to the main point. What is `.ReadConfigAndAddConfigAndWorker()` and what does it do. It is a builder-pattern extention method we will write and use to do all the config related stuff. 
+And now to the main point. What is `.ReadConfigAndAddConfigAndWorker()` and what does it do. It is a builder-pattern extention method we will write and use to do all the config related stuff.
 
 ```csharp
 // ConfigLoaderHelper.cs
@@ -70,26 +70,26 @@ public static class ConfigLoaderHelper
     {
         // get a hold of the services container
         ServiceProvider serviceProvider = services.BuildServiceProvider();
-        
-        // When bootstrpping the application .Net auto loades a config class for us. 
+
+        // When bootstrpping the application .Net auto loades a config class for us.
         // .Net also will add whetever it finds in appsettings.json.
         // This is how we ask to see that config class.
         IConfiguration config = serviceProvider
-            .GetService<IConfiguration>() 
+            .GetService<IConfiguration>()
             ?? throw new Exception("Missing congiguration");
-        
+
         // Read and DI-register based on class
         // Let's do that for the cat part
         Cat catConfig = config.GetSection(nameof(Cat)).Get<Cat>();
         services.AddSingleton(catConfig);
-        
+
         // We can also read and DI-register based on an interface
         // Let's do that with the CatWorkerConfiguration
         CatWorkerConfiguration workerConfig = config
             .GetSection(nameof(CatWorkerConfiguration))
             .Get<CatWorkerConfiguration>();
         services.AddSingleton<ICatWorkerConfiguration>(workerConfig);
-        
+
         // Finally we load our mighty service and return happily
         services.AddHostedService<CatWorker>();
         return services;
@@ -97,7 +97,7 @@ public static class ConfigLoaderHelper
 }
 ```
 
-Now we can inject our config at will where ever we need it. Let's see that in action and finally see what use this mighty application does. 
+Now we can inject our config at will where ever we need it. Let's see that in action and finally see what use this mighty application does.
 
 ```csharp
 // CatWorker.cs

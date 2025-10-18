@@ -1,7 +1,7 @@
 ---
 title: Free hyper key on windows
-date: 2025-03-10
-description: How to make hyperkey free of triggering M365. 
+published: 2025-03-10
+description: How to make hyperkey free of triggering M365.
 author: Petter
 ---
 # Free hyper key on windows

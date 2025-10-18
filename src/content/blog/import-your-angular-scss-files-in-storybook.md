@@ -1,6 +1,6 @@
 ---
-title: Import Your Angular Scss Files in Storybook 
-date: 2021-08-25
+title: Import Your Angular Scss Files in Storybook
+published: 2021-08-25
 description: How to deal with styles from global/external *.scss files when working with storybook
 author: Petter
 ---
@@ -33,7 +33,7 @@ However things seem to have stabilized. You no longer need `preview.js` and `sty
         }
       }
     },
-  
+
   "build-storybook": {
     "executor": "@nrwl/storybook:build",
     "outputs": [
@@ -78,14 +78,14 @@ However things seem to have stabilized. You no longer need `preview.js` and `sty
 ## For project before Angular 13
 Most commonly there is a need to include som set of global or external styles for storybooking Angular projects. As many use cases as there is ways of organizing styles I guess 😅
 
-Add a file responsible for importing styles. 
+Add a file responsible for importing styles.
 ```
 .storybook/
  |--main.js
  |--preview.js
  |--style-loader.scss 🆕
 ```
-Import the styles you need. 
+Import the styles you need.
 ```scss
 // style-loader.scss
 @import "/path/to/my/global/styles";
@@ -98,7 +98,7 @@ import '!style-loader!css-loader!sass-loader!./scss-loader.scss';
 ```
 
 ## If your design system/css is depending on some root tag/attribute
-It is not unusual that there is some special "hinge" near the root of your html DOM tree that in some ways controls part of your styles. 
+It is not unusual that there is some special "hinge" near the root of your html DOM tree that in some ways controls part of your styles.
 
 Storybook allows for manipulating the body by including a custom file named `preview-body.html` and putting ypur content there. There is a similar option 'preview-head.html' if you want to include something on the `<head>`-tag
 

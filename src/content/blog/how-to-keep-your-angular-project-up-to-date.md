@@ -1,6 +1,6 @@
 ---
 title: How to keep your Angular project up to date
-date: 2019-09-23
+published: 2019-09-23
 description: Command to bump your angular project to the latest version.
 author: Petter
 ---

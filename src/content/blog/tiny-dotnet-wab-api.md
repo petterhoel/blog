@@ -1,14 +1,14 @@
 ---
-title: Tiny dotnet web api 
-date: 2020-11-28
-description: How to make the smallest possible web api with .Net 5 and top level statements in c# 9. 
+title: Tiny dotnet web api
+published: 2020-11-28
+description: How to make the smallest possible web api with .Net 5 and top level statements in c# 9.
 author: Petter
 ---
 # Tiny dotnet web api
 
-With top level statements in c#9 and dotnet 5 there is really little code needed to have a working web api. 
+With top level statements in c#9 and dotnet 5 there is really little code needed to have a working web api.
 
-Prerequisite: [Download and install .Net 5 SDK](https://dotnet.microsoft.com/download). 
+Prerequisite: [Download and install .Net 5 SDK](https://dotnet.microsoft.com/download).
 
 Over in your terminal:
 
@@ -32,19 +32,19 @@ In the project file, tell .Net about the sdk and .Net-version we want to use.
 </Project>
 ```
 
-Now we can build the web api in c#. 
-```csharp 
+Now we can build the web api in c#.
+```csharp
 // Program.cs
 
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http; 
+using Microsoft.AspNetCore.Http;
 
 WebHost
     .CreateDefaultBuilder()
-    .Configure(app => 
-        app.Run(httpContext => 
+    .Configure(app =>
+        app.Run(httpContext =>
             httpContext.Response.WriteAsync("I'm a tiny api")))
     .Build()
     .Run();
@@ -56,7 +56,7 @@ Let's run the api from the terminal
 ```shell script
 > dotnet run
 ```
-it will output something like 
+it will output something like
 ```shell script
 > dotnet run
 

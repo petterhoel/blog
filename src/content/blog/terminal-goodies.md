@@ -1,6 +1,6 @@
 ---
 title: "Terminal goodies: Awesome 🤩, but forgettable 🕸"
-date: 2019-09-25
+published: 2019-09-25
 description: Files and commands that makes life better
 author: Petter
 ---

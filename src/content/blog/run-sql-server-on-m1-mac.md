@@ -1,6 +1,6 @@
 ---
 title: Run SQL Server on a M1 Mac
-date: 2022-06-06
+published: 2022-06-06
 description: How to set up a docker instance of SQL Server on a M1 Mac.
 author: Petter
 ---
@@ -15,7 +15,7 @@ docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=SomePass@word" -e "MSSQL_PID
 ## Command Breakdown
 What are those flags
 ```shell
-docker run 
+docker run
 -e "ACCEPT_EULA=1" # environment variable
 -e "MSSQL_SA_PASSWORD=SomePass@word" # environment variable
 -e "MSSQL_PID=Developer" # environment variable
@@ -23,7 +23,7 @@ docker run
 -p 1433:1433  # Publish a container's port(s) to the host / port forwarding
 -d # Run container in background and print container ID (--detach)
 --name=sql # Assign a name to the container
-mcr.microsoft.com/azure-sql-edge 
+mcr.microsoft.com/azure-sql-edge
 ```
 
 ## Source

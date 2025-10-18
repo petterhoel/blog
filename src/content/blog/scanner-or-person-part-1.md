@@ -1,7 +1,7 @@
 ---
 title: Scanner or person? Part 1
-date: 2020-01-27
-description: How we differentiated scanner input from a person typing. 
+published: 2020-01-27
+description: How we differentiated scanner input from a person typing.
 author: Petter
 ---
 # Scanner or person? 🤔 Part 1

@@ -1,6 +1,6 @@
 ---
 title: Angular in Vue
-date: 2019-02-16
+published: 2019-02-16
 description: Embedding stackblitz running an angular app in VuePress
 author: Petter
 ---

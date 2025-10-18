@@ -1,6 +1,6 @@
 ---
 title: Npm version annotation
-date: 2022-06-01
+published: 2022-06-01
 description: Tilde and caret, what does it mean for you dependencies
 author: Petter
 ---

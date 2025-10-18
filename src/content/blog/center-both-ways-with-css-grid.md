@@ -1,7 +1,7 @@
 ---
 title: Center Both Ways with Css Grid
-date: 2021-09-17
-description: Use a css one liner to center child horizontally and vertically with css grid. 
+published: 2021-09-17
+description: Use a css one liner to center child horizontally and vertically with css grid.
 author: Petter
 ---
 # Center Both Ways with Css Grid
@@ -14,7 +14,7 @@ Consider the following html:
 </span>
 ```
 
-We want to center our button. Assuming we are using css grid, we only need a one liner to center our s#itty button. 
+We want to center our button. Assuming we are using css grid, we only need a one liner to center our s#itty button.
 
 ```css
 #center-all-the-things {
@@ -37,7 +37,7 @@ We want to center our button. Assuming we are using css grid, we only need a one
         button {
           border: none;
           font-size: 4rem;
-          background: transparent; 
+          background: transparent;
         }
     </style>
     <span id="center-all-the-things">
@@ -46,7 +46,7 @@ We want to center our button. Assuming we are using css grid, we only need a one
 </section>
 
 
-One line to center, but there is some more going on in the embedded example, so for completeness: 
+One line to center, but there is some more going on in the embedded example, so for completeness:
 
 ```html
 <section>
@@ -63,7 +63,7 @@ One line to center, but there is some more going on in the embedded example, so 
     button {
       border: none;
       font-size: 4rem;
-      background: transparent; 
+      background: transparent;
     }
     </style>
     <span id="center-all-the-things">

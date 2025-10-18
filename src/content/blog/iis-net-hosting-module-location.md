@@ -1,7 +1,7 @@
 ---
 title: IIS .NET hosting module install location
-date: 2024-04-15
-description: 
+published: 2024-04-15
+description:
 author: Petter
 ---
 # IIS .NET hosting module install location
