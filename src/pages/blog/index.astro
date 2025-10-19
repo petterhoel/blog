@@ -61,18 +61,17 @@ posts = posts
                 margin-top: 1rem;
             }
             & p {
-                font-size: 16px;
-                margin: 4px 0;
+                font-size: 17px;
+                margin: 5px 0 0px;
             }
             & time {
-                font-size: 16px;
+                font-size: 14px;
+                color: var(--cat-subtext-color);
             }
         }
     }
-    li {
-        transition: transform 0.2s cubic-bezier(0.25, 0.48, 0.23, 0.99);
-    }
-    li:hover {
-        transform: scale(1.01);
+
+    li:hover a {
+        transition: color .2s cubic-bezier(0.25, 0.48, 0.23, 0.99);
     }
 </style>

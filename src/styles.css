@@ -46,7 +46,8 @@
     --text-sans-font-name: "Montserrat";
     --text-mono-font-name: "JetBrains";
     --cat-background: light-dark(#eff1f5, #181825);
-    --cat-text: light-dark(#4c4f69, #cdd6f4);
+    --cat-text-color: light-dark(#4c4f69, #cdd6f4);
+    --cat-subtext-color: light-dark(#7f849c,#9399b2);
     --cat-pink: light-dark(#ea76cb, #f5c2e7);
     --cat-lavender: light-dark(#7287fd, #b4befe);
     --cat-yellow: light-dark(#df8e1d, #f9e2af);
@@ -61,7 +62,7 @@ html * {
 
 html {
     font-family: var(--text-sans-font-name), sans-serif;
-    color: var(--cat-text);
+    color: var(--cat-text-color);
     background: var(--cat-background);
 }
 
@@ -118,11 +119,15 @@ h6 {
 }
 
 a {
-    color: var(--text);
+    color: var(--cat-text-color);
 }
 
 a:hover {
     color: var(--cat-pink);
+}
+
+p {
+    line-height: 1.5;
 }
 
 ul {
@@ -136,9 +141,18 @@ ul[class] {
     margin: 0;
 }
 
+.sub-text-color {
+    color: var(--cat-subtext-color);
+}
+
 pre,
 code {
     background-color: #24292e;
+}
+
+code {
+    font-family: var(--text-mono-font-name), monospace;
+    font-size: 20px;
 }
 
 pre {
@@ -157,7 +171,9 @@ code:not(:has(> .github-dark)) {
     font-size: 16px;
 }
 
-article p > code {
+
+article p > code,
+article li > code {
     background-color: light-dark(#dce0e8, #24292e);
 }
 
@@ -168,10 +184,7 @@ pre.github-dark {
     }
 }
 
-code {
-    font-family: var(--text-mono-font-name), monospace;
-    font-size: 20px;
-}
+
 
 @media (min-width: 600px) {
     .about-image {

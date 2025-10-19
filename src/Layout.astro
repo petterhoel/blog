@@ -14,13 +14,13 @@ const { title, description } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
-        <title>{title} | Bits&&Pixels</title>
+        <title>{title} | bits&&pixels</title>
     </head>
     <body>
         <nav class="mono">
             <a href="/" class="title-link">
                 <img src="/icon.svg" height="36" alt="Bits&&Pixels logo" />
-                <span class="title mono">bits && pixels</span>
+                <span class="title mono">bits<span style="padding: 0 4px">&&</span>pixels</span>
             </a>
 
             <ul class="nav-links">
@@ -102,7 +102,6 @@ const { title, description } = Astro.props;
         }
 
         a.title-link {
-            color: var(--cat-lavender);
             display: flex;
             align-items: end;
             gap: 16px;
@@ -119,8 +118,9 @@ const { title, description } = Astro.props;
             }
 
             & .title {
+                font-family: var(--text-sans-font-name), sans-serif;
                 font-weight: 700;
-                font-size: 30px;
+                font-size: 26px;
                 letter-spacing: 0.054em;
             }
         }
@@ -128,7 +128,6 @@ const { title, description } = Astro.props;
         & .nav-links {
             margin: 0;
             padding: 0;
-            padding-bottom: 2px; /*optical alignment*/
             display: flex;
             flex-wrap: nowrap;
             gap: 1rem;
